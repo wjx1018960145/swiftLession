@@ -21,6 +21,12 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(dataSource[indexPath.row])
+        if indexPath.row == 0{
+            self.navigationController?.pushViewController(ThresholdViewController(), animated: true)
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(CommentsViewController(), animated: true)
+        }
+                
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

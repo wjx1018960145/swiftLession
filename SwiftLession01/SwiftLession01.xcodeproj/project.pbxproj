@@ -16,6 +16,8 @@
 		6B5CF6D52766EA9900C477A5 /* SwiftLession01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6D42766EA9900C477A5 /* SwiftLession01Tests.swift */; };
 		6B5CF6DF2766EA9900C477A5 /* SwiftLession01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6DE2766EA9900C477A5 /* SwiftLession01UITests.swift */; };
 		6B5CF6E12766EA9900C477A5 /* SwiftLession01UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6E02766EA9900C477A5 /* SwiftLession01UITestsLaunchTests.swift */; };
+		6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */; };
+		6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		6B5CF6DA2766EA9900C477A5 /* SwiftLession01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLession01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5CF6DE2766EA9900C477A5 /* SwiftLession01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLession01UITests.swift; sourceTree = "<group>"; };
 		6B5CF6E02766EA9900C477A5 /* SwiftLession01UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLession01UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdViewController.swift; sourceTree = "<group>"; };
+		6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,8 @@
 				6B5CF6C62766EA9800C477A5 /* Assets.xcassets */,
 				6B5CF6C82766EA9800C477A5 /* LaunchScreen.storyboard */,
 				6B5CF6CB2766EA9800C477A5 /* Info.plist */,
+				6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */,
+				6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */,
 			);
 			path = SwiftLession01;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */,
+				6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */,
 				6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */,
 				6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */,
 			);
