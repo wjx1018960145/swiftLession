@@ -35,6 +35,7 @@
 		6BE661C0276884CE001867C5 /* classstruct.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B627688488001867C5 /* classstruct.md */; };
 		6BE661C1276884CE001867C5 /* property.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B72768849F001867C5 /* property.md */; };
 		6BE661C2276884CE001867C5 /* method.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B8276884B6001867C5 /* method.md */; };
+		6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C527688A30001867C5 /* WX20211214-161421.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		6BE661B627688488001867C5 /* classstruct.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = classstruct.md; sourceTree = "<group>"; };
 		6BE661B72768849F001867C5 /* property.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = property.md; sourceTree = "<group>"; };
 		6BE661B8276884B6001867C5 /* method.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = method.md; sourceTree = "<group>"; };
+		6BE661C527688A30001867C5 /* WX20211214-161421.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-161421.png"; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		6B5CF6BC2766EA9100C477A5 /* SwiftLession01 */ = {
 			isa = PBXGroup;
 			children = (
+				6BE661C427688A17001867C5 /* image */,
 				6BE661C3276885F1001867C5 /* md */,
 				6B5CF76027682D8200C477A5 /* Utils */,
 				6B5CF75E27682D4F00C477A5 /* JSONFile */,
@@ -218,6 +221,14 @@
 				6BE661B8276884B6001867C5 /* method.md */,
 			);
 			path = md;
+			sourceTree = "<group>";
+		};
+		6BE661C427688A17001867C5 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				6BE661C527688A30001867C5 /* WX20211214-161421.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		6FEFEA27862A37A3266D2486 /* Pods */ = {
@@ -336,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE661B9276884CE001867C5 /* operation.md in Resources */,
+				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
 				6BE661BA276884CE001867C5 /* character.md in Resources */,
 				6BE661BB276884CE001867C5 /* gather.md in Resources */,
 				6BE661BC276884CE001867C5 /* controlflow.md in Resources */,
