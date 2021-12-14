@@ -150,6 +150,7 @@
 		6B5CF6BC2766EA9100C477A5 /* SwiftLession01 */ = {
 			isa = PBXGroup;
 			children = (
+				6BE661C3276885F1001867C5 /* md */,
 				6B5CF76027682D8200C477A5 /* Utils */,
 				6B5CF75E27682D4F00C477A5 /* JSONFile */,
 				6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */,
@@ -189,6 +190,21 @@
 			children = (
 				6B5CF75F27682D6200C477A5 /* Base.geojson */,
 				6B5CF7672768366900C477A5 /* UIkit.geojson */,
+			);
+			path = JSONFile;
+			sourceTree = "<group>";
+		};
+		6B5CF76027682D8200C477A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CF76127682E3E00C477A5 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6BE661C3276885F1001867C5 /* md */ = {
+			isa = PBXGroup;
+			children = (
 				6BE661AD27686AC8001867C5 /* base.md */,
 				6BE661AF2768823D001867C5 /* operation.md */,
 				6BE661B027688265001867C5 /* character.md */,
@@ -201,15 +217,7 @@
 				6BE661B72768849F001867C5 /* property.md */,
 				6BE661B8276884B6001867C5 /* method.md */,
 			);
-			path = JSONFile;
-			sourceTree = "<group>";
-		};
-		6B5CF76027682D8200C477A5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				6B5CF76127682E3E00C477A5 /* Utils.swift */,
-			);
-			path = Utils;
+			path = md;
 			sourceTree = "<group>";
 		};
 		6FEFEA27862A37A3266D2486 /* Pods */ = {
