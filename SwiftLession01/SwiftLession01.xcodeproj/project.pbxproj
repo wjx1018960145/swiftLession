@@ -36,6 +36,8 @@
 		6BE661C1276884CE001867C5 /* property.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B72768849F001867C5 /* property.md */; };
 		6BE661C2276884CE001867C5 /* method.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B8276884B6001867C5 /* method.md */; };
 		6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C527688A30001867C5 /* WX20211214-161421.png */; };
+		6BE661C827689191001867C5 /* WX20211214-164643.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C727689191001867C5 /* WX20211214-164643.png */; };
+		6BE661CA276899F0001867C5 /* WX20211214-172044.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C9276899F0001867C5 /* WX20211214-172044.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		6BE661B72768849F001867C5 /* property.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = property.md; sourceTree = "<group>"; };
 		6BE661B8276884B6001867C5 /* method.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = method.md; sourceTree = "<group>"; };
 		6BE661C527688A30001867C5 /* WX20211214-161421.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-161421.png"; sourceTree = "<group>"; };
+		6BE661C727689191001867C5 /* WX20211214-164643.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-164643.png"; sourceTree = "<group>"; };
+		6BE661C9276899F0001867C5 /* WX20211214-172044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-172044.png"; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -226,7 +230,9 @@
 		6BE661C427688A17001867C5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6BE661C9276899F0001867C5 /* WX20211214-172044.png */,
 				6BE661C527688A30001867C5 /* WX20211214-161421.png */,
+				6BE661C727689191001867C5 /* WX20211214-164643.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -350,11 +356,13 @@
 				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
 				6BE661BA276884CE001867C5 /* character.md in Resources */,
 				6BE661BB276884CE001867C5 /* gather.md in Resources */,
+				6BE661CA276899F0001867C5 /* WX20211214-172044.png in Resources */,
 				6BE661BC276884CE001867C5 /* controlflow.md in Resources */,
 				6BE661BD276884CE001867C5 /* function.md in Resources */,
 				6BE661BE276884CE001867C5 /* closure.md in Resources */,
 				6BE661BF276884CE001867C5 /* enumerate.md in Resources */,
 				6BE661C0276884CE001867C5 /* classstruct.md in Resources */,
+				6BE661C827689191001867C5 /* WX20211214-164643.png in Resources */,
 				6BE661C1276884CE001867C5 /* property.md in Resources */,
 				6BE661C2276884CE001867C5 /* method.md in Resources */,
 				6BE661AE276873F5001867C5 /* base.md in Resources */,
