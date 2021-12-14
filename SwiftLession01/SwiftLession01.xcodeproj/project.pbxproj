@@ -24,6 +24,17 @@
 		6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF7652768360900C477A5 /* UIKitViewController.swift */; };
 		6B5CF768276839BD00C477A5 /* Base.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF75F27682D6200C477A5 /* Base.geojson */; };
 		6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF7672768366900C477A5 /* UIkit.geojson */; };
+		6BE661AE276873F5001867C5 /* base.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661AD27686AC8001867C5 /* base.md */; };
+		6BE661B9276884CE001867C5 /* operation.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661AF2768823D001867C5 /* operation.md */; };
+		6BE661BA276884CE001867C5 /* character.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B027688265001867C5 /* character.md */; };
+		6BE661BB276884CE001867C5 /* gather.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B127688284001867C5 /* gather.md */; };
+		6BE661BC276884CE001867C5 /* controlflow.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B2276882A5001867C5 /* controlflow.md */; };
+		6BE661BD276884CE001867C5 /* function.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B3276882BB001867C5 /* function.md */; };
+		6BE661BE276884CE001867C5 /* closure.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B4276882D5001867C5 /* closure.md */; };
+		6BE661BF276884CE001867C5 /* enumerate.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B527688306001867C5 /* enumerate.md */; };
+		6BE661C0276884CE001867C5 /* classstruct.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B627688488001867C5 /* classstruct.md */; };
+		6BE661C1276884CE001867C5 /* property.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B72768849F001867C5 /* property.md */; };
+		6BE661C2276884CE001867C5 /* method.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B8276884B6001867C5 /* method.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +77,17 @@
 		6B5CF763276832C200C477A5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6B5CF7652768360900C477A5 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		6B5CF7672768366900C477A5 /* UIkit.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIkit.geojson; sourceTree = "<group>"; };
+		6BE661AD27686AC8001867C5 /* base.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = base.md; sourceTree = "<group>"; };
+		6BE661AF2768823D001867C5 /* operation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = operation.md; sourceTree = "<group>"; };
+		6BE661B027688265001867C5 /* character.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = character.md; sourceTree = "<group>"; };
+		6BE661B127688284001867C5 /* gather.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = gather.md; sourceTree = "<group>"; };
+		6BE661B2276882A5001867C5 /* controlflow.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = controlflow.md; sourceTree = "<group>"; };
+		6BE661B3276882BB001867C5 /* function.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = function.md; sourceTree = "<group>"; };
+		6BE661B4276882D5001867C5 /* closure.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = closure.md; sourceTree = "<group>"; };
+		6BE661B527688306001867C5 /* enumerate.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = enumerate.md; sourceTree = "<group>"; };
+		6BE661B627688488001867C5 /* classstruct.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = classstruct.md; sourceTree = "<group>"; };
+		6BE661B72768849F001867C5 /* property.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = property.md; sourceTree = "<group>"; };
+		6BE661B8276884B6001867C5 /* method.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = method.md; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +189,17 @@
 			children = (
 				6B5CF75F27682D6200C477A5 /* Base.geojson */,
 				6B5CF7672768366900C477A5 /* UIkit.geojson */,
+				6BE661AD27686AC8001867C5 /* base.md */,
+				6BE661AF2768823D001867C5 /* operation.md */,
+				6BE661B027688265001867C5 /* character.md */,
+				6BE661B127688284001867C5 /* gather.md */,
+				6BE661B2276882A5001867C5 /* controlflow.md */,
+				6BE661B3276882BB001867C5 /* function.md */,
+				6BE661B4276882D5001867C5 /* closure.md */,
+				6BE661B527688306001867C5 /* enumerate.md */,
+				6BE661B627688488001867C5 /* classstruct.md */,
+				6BE661B72768849F001867C5 /* property.md */,
+				6BE661B8276884B6001867C5 /* method.md */,
 			);
 			path = JSONFile;
 			sourceTree = "<group>";
@@ -294,6 +327,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE661B9276884CE001867C5 /* operation.md in Resources */,
+				6BE661BA276884CE001867C5 /* character.md in Resources */,
+				6BE661BB276884CE001867C5 /* gather.md in Resources */,
+				6BE661BC276884CE001867C5 /* controlflow.md in Resources */,
+				6BE661BD276884CE001867C5 /* function.md in Resources */,
+				6BE661BE276884CE001867C5 /* closure.md in Resources */,
+				6BE661BF276884CE001867C5 /* enumerate.md in Resources */,
+				6BE661C0276884CE001867C5 /* classstruct.md in Resources */,
+				6BE661C1276884CE001867C5 /* property.md in Resources */,
+				6BE661C2276884CE001867C5 /* method.md in Resources */,
+				6BE661AE276873F5001867C5 /* base.md in Resources */,
 				6B5CF768276839BD00C477A5 /* Base.geojson in Resources */,
 				6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */,
 				6B5CF6CA2766EA9800C477A5 /* LaunchScreen.storyboard in Resources */,

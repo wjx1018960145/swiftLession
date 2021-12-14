@@ -43,13 +43,20 @@ class BaseViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = (dataSource?[indexPath.row] as! NSDictionary)["title"] as! String
+        let dic = dataSource?[indexPath.row] as! NSDictionary
+        cell.textLabel?.text = dic["title"] as! String?
 
         cell.accessoryType = .disclosureIndicator
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc =  MarkDownViewController()
+        let dic =  dataSource?[indexPath.row] as![String:Any]
+        vc.url = dic["mdName"] as? NSString
+        vc.titleStr = dic["title"] as! String
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     /*
     // MARK: - Navigation
 
