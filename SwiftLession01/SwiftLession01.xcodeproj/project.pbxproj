@@ -19,6 +19,11 @@
 		6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */; };
 		6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */; };
 		6B5CF75D27674AAA00C477A5 /* MarkDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF75C27674AAA00C477A5 /* MarkDownViewController.swift */; };
+		6B5CF76227682E3E00C477A5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF76127682E3E00C477A5 /* Utils.swift */; };
+		6B5CF764276832C200C477A5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF763276832C200C477A5 /* BaseViewController.swift */; };
+		6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF7652768360900C477A5 /* UIKitViewController.swift */; };
+		6B5CF768276839BD00C477A5 /* Base.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF75F27682D6200C477A5 /* Base.geojson */; };
+		6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF7672768366900C477A5 /* UIkit.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdViewController.swift; sourceTree = "<group>"; };
 		6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		6B5CF75C27674AAA00C477A5 /* MarkDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownViewController.swift; sourceTree = "<group>"; };
+		6B5CF75F27682D6200C477A5 /* Base.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Base.geojson; sourceTree = "<group>"; };
+		6B5CF76127682E3E00C477A5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6B5CF763276832C200C477A5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6B5CF7652768360900C477A5 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		6B5CF7672768366900C477A5 /* UIkit.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIkit.geojson; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +128,8 @@
 		6B5CF6BC2766EA9100C477A5 /* SwiftLession01 */ = {
 			isa = PBXGroup;
 			children = (
+				6B5CF76027682D8200C477A5 /* Utils */,
+				6B5CF75E27682D4F00C477A5 /* JSONFile */,
 				6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */,
 				6B5CF6C12766EA9200C477A5 /* ViewController.swift */,
 				6B5CF6C32766EA9200C477A5 /* Main.storyboard */,
@@ -127,6 +139,8 @@
 				6B5CF6ED276730AB00C477A5 /* ThresholdViewController.swift */,
 				6B5CF6EF2767350A00C477A5 /* CommentsViewController.swift */,
 				6B5CF75C27674AAA00C477A5 /* MarkDownViewController.swift */,
+				6B5CF763276832C200C477A5 /* BaseViewController.swift */,
+				6B5CF7652768360900C477A5 /* UIKitViewController.swift */,
 			);
 			path = SwiftLession01;
 			sourceTree = "<group>";
@@ -146,6 +160,23 @@
 				6B5CF6E02766EA9900C477A5 /* SwiftLession01UITestsLaunchTests.swift */,
 			);
 			path = SwiftLession01UITests;
+			sourceTree = "<group>";
+		};
+		6B5CF75E27682D4F00C477A5 /* JSONFile */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CF75F27682D6200C477A5 /* Base.geojson */,
+				6B5CF7672768366900C477A5 /* UIkit.geojson */,
+			);
+			path = JSONFile;
+			sourceTree = "<group>";
+		};
+		6B5CF76027682D8200C477A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CF76127682E3E00C477A5 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6FEFEA27862A37A3266D2486 /* Pods */ = {
@@ -263,6 +294,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5CF768276839BD00C477A5 /* Base.geojson in Resources */,
+				6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */,
 				6B5CF6CA2766EA9800C477A5 /* LaunchScreen.storyboard in Resources */,
 				6B5CF6C72766EA9800C477A5 /* Assets.xcassets in Resources */,
 				6B5CF6C52766EA9200C477A5 /* Main.storyboard in Resources */,
@@ -333,10 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */,
+				6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */,
 				6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */,
 				6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */,
 				6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */,
 				6B5CF75D27674AAA00C477A5 /* MarkDownViewController.swift in Sources */,
+				6B5CF764276832C200C477A5 /* BaseViewController.swift in Sources */,
+				6B5CF76227682E3E00C477A5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         if indexPath.row == 0{
             self.navigationController?.pushViewController(ThresholdViewController(), animated: true)
         }else if indexPath.row == 1 {
-            self.navigationController?.pushViewController(CommentsViewController(), animated: true)
+            self.navigationController?.pushViewController(BaseViewController(), animated: true)
+        }else if indexPath.row == 2{
+            self.navigationController?.pushViewController(UIKitViewController(), animated: true)
         }
                 
     }
@@ -44,7 +46,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
         self.title = "Swift课堂"
-        self.dataSource = NSMutableArray.init(array: ["入门介绍","注释","常量与变量","基本数据类型与运算符","元组","逻辑分支","循环","字符","字符串","数组","集合","字典","可选型","函数","闭包","高阶函数","实用知识点","枚举","结构体","类","属性与方法","构造与析构函数","结构体与类","类型转换","协议","扩展","Associated Object","泛型","异常","Result","Never","元类型、.self 与 Self","@objc","where","Key Path","@dynamicMemberLookup","@dynamicCallable","访问权限","Codable协议","playground可视化开发","混合开发","命名空间","常用数据类型"])
+        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方"])
         createTableview()
         // Do any additional setup after loading the view.
     }
