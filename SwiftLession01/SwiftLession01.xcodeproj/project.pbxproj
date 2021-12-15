@@ -38,6 +38,7 @@
 		6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C527688A30001867C5 /* WX20211214-161421.png */; };
 		6BE661C827689191001867C5 /* WX20211214-164643.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C727689191001867C5 /* WX20211214-164643.png */; };
 		6BE661CA276899F0001867C5 /* WX20211214-172044.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661C9276899F0001867C5 /* WX20211214-172044.png */; };
+		6BE661CC2769C593001867C5 /* WX20211215-143826.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661CB2769C592001867C5 /* WX20211215-143826.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		6BE661C527688A30001867C5 /* WX20211214-161421.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-161421.png"; sourceTree = "<group>"; };
 		6BE661C727689191001867C5 /* WX20211214-164643.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-164643.png"; sourceTree = "<group>"; };
 		6BE661C9276899F0001867C5 /* WX20211214-172044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211214-172044.png"; sourceTree = "<group>"; };
+		6BE661CB2769C592001867C5 /* WX20211215-143826.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211215-143826.png"; sourceTree = "<group>"; };
 		CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLession01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -230,6 +232,7 @@
 		6BE661C427688A17001867C5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6BE661CB2769C592001867C5 /* WX20211215-143826.png */,
 				6BE661C9276899F0001867C5 /* WX20211214-172044.png */,
 				6BE661C527688A30001867C5 /* WX20211214-161421.png */,
 				6BE661C727689191001867C5 /* WX20211214-164643.png */,
@@ -354,6 +357,7 @@
 			files = (
 				6BE661B9276884CE001867C5 /* operation.md in Resources */,
 				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
+				6BE661CC2769C593001867C5 /* WX20211215-143826.png in Resources */,
 				6BE661BA276884CE001867C5 /* character.md in Resources */,
 				6BE661BB276884CE001867C5 /* gather.md in Resources */,
 				6BE661CA276899F0001867C5 /* WX20211214-172044.png in Resources */,

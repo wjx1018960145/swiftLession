@@ -614,3 +614,71 @@ let dogString = "Dog‼🐶"
 | UTF-8 Code Unit | 68       | 111      | 103      | 226      | 128       | 188  | 240  | 159  | 144  | 182  |
 | Position        | 0        | 1        | 2        | 3        | 4         | 5    | 6    | 7    | 8    | 9    |
 
+```swift
+for codeUnit in dogString.utf8 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 226 128 188 240 159 144 182
+```
+
+上面的例子中，前三个 10 进制 `codeUnit` 值（`68`、`111`、`103`）代表了字符 `D`、`o` 和 `g`，它们的 UTF-8 表示与 ASCII 表示相同。接下来的三个 10 进制 `codeUnit` 值（`226`、`128`、`188`）是 `DOUBLE EXCLAMATION MARK` 的3字节 UTF-8 表示。最后的四个 `codeUnit` 值（`240`、`159`、`144`、`182`）是 `DOG FACE` 的4字节 UTF-8 表示
+
+### UTF-16 表示
+
+你可以通过遍历 `String` 的 `utf16` 属性来访问它的 `UTF-16` 表示。其为 `String.UTF16View` 类型的属性，`UTF16View` 是无符号16位（`UInt16`）值的集合，每一个 `UInt16` 都是一个字符的 UTF-16 表示：
+
+![WX20211215-143826](/Users/wjx/Desktop/swift课程/swiftLession/SwiftLession01/SwiftLession01/image/WX20211215-143826.png)
+
+```swift
+for codeUnit in dogString.utf16 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 8252 55357 56374
+```
+
+同样，前三个 `codeUnit` 值（`68`、`111`、`103`）代表了字符 `D`、`o` 和 `g`，它们的 UTF-16 代码单元和 UTF-8 完全相同（因为这些 Unicode 标量表示 ASCII 字符）。
+
+第四个 `codeUnit` 值（`8252`）是一个等于十六进制 `203C` 的的十进制值。这个代表了 `DOUBLE EXCLAMATION MARK` 字符的 Unicode 标量值 `U+203C`。这个字符在 UTF-16 中可以用一个代码单元表示。
+
+第五和第六个 `codeUnit` 值（`55357` 和 `56374`）是 `DOG FACE` 字符的 UTF-16 表示。第一个值为 `U+D83D`(十进制值为 `55357`)，第二个值为 `U+DC36`(十进制值为 `56374`)。
+
+### Unicode 标量表示
+
+你可以通过遍历 `String` 值的 `unicodeScalars` 属性来访问它的 Unicode 标量表示。其为 `UnicodeScalarView` 类型的属性，`UnicodeScalarView` 是 `UnicodeScalar` 类型的值的集合。
+
+每一个 `UnicodeScalar` 拥有一个 `value` 属性，可以返回对应的 21 位数值，用 `UInt32` 来表示：
+
+| Character                | D U+0044 | o U+006F | g U+0067 | ‼ U+203C | 🐶 U+1F436 |
+| ------------------------ | -------- | -------- | -------- | -------- | --------- |
+| Unicode Scalar Code Unit | 68       | 111      | 103      | 8252     | 128054    |
+| Position                 | 0        | 1        | 2        | 3        | 4         |
+
+```swift
+for scalar in dogString.unicodeScalars {
+    print("\(scalar.value) ", terminator: "")
+}
+print("")
+// 68 111 103 8252 128054
+```
+
+前三个 `UnicodeScalar` 值（`68`、`111`、`103`）的 `value` 属性仍然代表字符 `D`、`o` 和 `g`。
+
+第四个 `codeUnit` 值（`8252`）仍然是一个等于十六进制 `203C` 的十进制值。这个代表了 `DOUBLE EXCLAMATION MARK` 字符的 Unicode 标量 `U+203C`。
+
+第五个 `UnicodeScalar` 值的 `value` 属性，`128054`，是一个十六进制 `1F436` 的十进制表示。其等同于 `DOG FACE` 的 Unicode 标量 `U+1F436`。
+
+作为查询它们的 `value` 属性的一种替代方法，每个 `UnicodeScalar` 值也可以用来构建一个新的 `String` 值，比如在字符串插值中使用：
+
+```swift
+for scalar in dogString.unicodeScalars {
+    print("\(scalar) ")
+}
+// D
+// o
+// g
+// ‼
+// 🐶
+```
+
