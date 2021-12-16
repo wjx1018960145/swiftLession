@@ -24,6 +24,11 @@
 		6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF7652768360900C477A5 /* UIKitViewController.swift */; };
 		6B5CF768276839BD00C477A5 /* Base.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF75F27682D6200C477A5 /* Base.geojson */; };
 		6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF7672768366900C477A5 /* UIkit.geojson */; };
+		6B6F3413276ADAED00882056 /* WX20211216-102349.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F3412276ADAEC00882056 /* WX20211216-102349.png */; };
+		6B6F3415276AE10C00882056 /* WX20211216-105025.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F3414276AE10B00882056 /* WX20211216-105025.png */; };
+		6B6F3417276B040400882056 /* WX20211216-105150.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F3416276B040400882056 /* WX20211216-105150.png */; };
+		6B6F3419276B046A00882056 /* WX20211216-132105.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F3418276B046A00882056 /* WX20211216-132105.png */; };
+		6B6F341B276B05CF00882056 /* WX20211216-132720.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F341A276B05CF00882056 /* WX20211216-132720.png */; };
 		6BE661AE276873F5001867C5 /* base.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661AD27686AC8001867C5 /* base.md */; };
 		6BE661B9276884CE001867C5 /* operation.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661AF2768823D001867C5 /* operation.md */; };
 		6BE661BA276884CE001867C5 /* character.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE661B027688265001867C5 /* character.md */; };
@@ -84,6 +89,11 @@
 		6B5CF763276832C200C477A5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6B5CF7652768360900C477A5 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		6B5CF7672768366900C477A5 /* UIkit.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIkit.geojson; sourceTree = "<group>"; };
+		6B6F3412276ADAEC00882056 /* WX20211216-102349.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211216-102349.png"; sourceTree = "<group>"; };
+		6B6F3414276AE10B00882056 /* WX20211216-105025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211216-105025.png"; sourceTree = "<group>"; };
+		6B6F3416276B040400882056 /* WX20211216-105150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211216-105150.png"; sourceTree = "<group>"; };
+		6B6F3418276B046A00882056 /* WX20211216-132105.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211216-132105.png"; sourceTree = "<group>"; };
+		6B6F341A276B05CF00882056 /* WX20211216-132720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211216-132720.png"; sourceTree = "<group>"; };
 		6BE661AD27686AC8001867C5 /* base.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = base.md; sourceTree = "<group>"; };
 		6BE661AF2768823D001867C5 /* operation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = operation.md; sourceTree = "<group>"; };
 		6BE661B027688265001867C5 /* character.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = character.md; sourceTree = "<group>"; };
@@ -238,6 +248,11 @@
 		6BE661C427688A17001867C5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6B6F341A276B05CF00882056 /* WX20211216-132720.png */,
+				6B6F3418276B046A00882056 /* WX20211216-132105.png */,
+				6B6F3416276B040400882056 /* WX20211216-105150.png */,
+				6B6F3414276AE10B00882056 /* WX20211216-105025.png */,
+				6B6F3412276ADAEC00882056 /* WX20211216-102349.png */,
 				6BE661D12769CB81001867C5 /* WX20211215-150610.png */,
 				6BE661CF2769CB02001867C5 /* WX20211215-150407.png */,
 				6BE661CD2769C76B001867C5 /* WX20211215-144834.png */,
@@ -368,7 +383,9 @@
 				6BE661D02769CB03001867C5 /* WX20211215-150407.png in Resources */,
 				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
 				6BE661CC2769C593001867C5 /* WX20211215-143826.png in Resources */,
+				6B6F3419276B046A00882056 /* WX20211216-132105.png in Resources */,
 				6BE661BA276884CE001867C5 /* character.md in Resources */,
+				6B6F341B276B05CF00882056 /* WX20211216-132720.png in Resources */,
 				6BE661BB276884CE001867C5 /* gather.md in Resources */,
 				6BE661CA276899F0001867C5 /* WX20211214-172044.png in Resources */,
 				6BE661BC276884CE001867C5 /* controlflow.md in Resources */,
@@ -378,10 +395,13 @@
 				6BE661C0276884CE001867C5 /* classstruct.md in Resources */,
 				6BE661C827689191001867C5 /* WX20211214-164643.png in Resources */,
 				6BE661C1276884CE001867C5 /* property.md in Resources */,
+				6B6F3413276ADAED00882056 /* WX20211216-102349.png in Resources */,
 				6BE661D22769CB81001867C5 /* WX20211215-150610.png in Resources */,
 				6BE661C2276884CE001867C5 /* method.md in Resources */,
 				6BE661AE276873F5001867C5 /* base.md in Resources */,
 				6B5CF768276839BD00C477A5 /* Base.geojson in Resources */,
+				6B6F3417276B040400882056 /* WX20211216-105150.png in Resources */,
+				6B6F3415276AE10C00882056 /* WX20211216-105025.png in Resources */,
 				6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */,
 				6B5CF6CA2766EA9800C477A5 /* LaunchScreen.storyboard in Resources */,
 				6B5CF6C72766EA9800C477A5 /* Assets.xcassets in Resources */,
