@@ -10,6 +10,8 @@
 		313978E13C0D0564DEE33135 /* Pods_SwiftLession01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */; };
 		6B0ED283277D9C2F00A0E40C /* WX20211230-154919.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */; };
 		6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */; };
+		6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED286277DA16200A0E40C /* WX20211230-161158.png */; };
+		6B0ED289277DA7E900A0E40C /* WX20211230-163940.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED288277DA7E900A0E40C /* WX20211230-163940.png */; };
 		6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */; };
 		6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C12766EA9200C477A5 /* ViewController.swift */; };
 		6B5CF6C52766EA9200C477A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C32766EA9200C477A5 /* Main.storyboard */; };
@@ -75,6 +77,8 @@
 		2FCF26416840A7E2DA0D7CDD /* Pods-SwiftLession01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLession01.release.xcconfig"; path = "Target Support Files/Pods-SwiftLession01/Pods-SwiftLession01.release.xcconfig"; sourceTree = "<group>"; };
 		6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-154919.png"; sourceTree = "<group>"; };
 		6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-155144.png"; sourceTree = "<group>"; };
+		6B0ED286277DA16200A0E40C /* WX20211230-161158.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-161158.png"; sourceTree = "<group>"; };
+		6B0ED288277DA7E900A0E40C /* WX20211230-163940.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-163940.png"; sourceTree = "<group>"; };
 		6B5CF6BA2766EA9100C477A5 /* SwiftLession01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLession01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5CF6C12766EA9200C477A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 		6BE661C427688A17001867C5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6B0ED288277DA7E900A0E40C /* WX20211230-163940.png */,
+				6B0ED286277DA16200A0E40C /* WX20211230-161158.png */,
 				6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */,
 				6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */,
 				6B6F341E276B376800882056 /* WX20211216-165857.png */,
@@ -391,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */,
 				6BE661B9276884CE001867C5 /* operation.md in Resources */,
 				6BE661D02769CB03001867C5 /* WX20211215-150407.png in Resources */,
 				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
@@ -420,6 +427,7 @@
 				6B6F3415276AE10C00882056 /* WX20211216-105025.png in Resources */,
 				6B5CF769276839BD00C477A5 /* UIkit.geojson in Resources */,
 				6B5CF6CA2766EA9800C477A5 /* LaunchScreen.storyboard in Resources */,
+				6B0ED289277DA7E900A0E40C /* WX20211230-163940.png in Resources */,
 				6B5CF6C72766EA9800C477A5 /* Assets.xcassets in Resources */,
 				6BE661CE2769C76B001867C5 /* WX20211215-144834.png in Resources */,
 				6B5CF6C52766EA9200C477A5 /* Main.storyboard in Resources */,
