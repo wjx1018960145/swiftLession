@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		313978E13C0D0564DEE33135 /* Pods_SwiftLession01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */; };
+		6B0ED283277D9C2F00A0E40C /* WX20211230-154919.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */; };
+		6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */; };
 		6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */; };
 		6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C12766EA9200C477A5 /* ViewController.swift */; };
 		6B5CF6C52766EA9200C477A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C32766EA9200C477A5 /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 /* Begin PBXFileReference section */
 		21364C005C24C58A6DF1E66A /* Pods-SwiftLession01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLession01.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLession01/Pods-SwiftLession01.debug.xcconfig"; sourceTree = "<group>"; };
 		2FCF26416840A7E2DA0D7CDD /* Pods-SwiftLession01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLession01.release.xcconfig"; path = "Target Support Files/Pods-SwiftLession01/Pods-SwiftLession01.release.xcconfig"; sourceTree = "<group>"; };
+		6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-154919.png"; sourceTree = "<group>"; };
+		6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-155144.png"; sourceTree = "<group>"; };
 		6B5CF6BA2766EA9100C477A5 /* SwiftLession01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLession01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5CF6C12766EA9200C477A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 		6BE661C427688A17001867C5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */,
+				6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */,
 				6B6F341E276B376800882056 /* WX20211216-165857.png */,
 				6B6F341C276B373100882056 /* WX20211216-165739.png */,
 				6B6F341A276B05CF00882056 /* WX20211216-132720.png */,
@@ -388,6 +394,7 @@
 				6BE661B9276884CE001867C5 /* operation.md in Resources */,
 				6BE661D02769CB03001867C5 /* WX20211215-150407.png in Resources */,
 				6BE661C627688A30001867C5 /* WX20211214-161421.png in Resources */,
+				6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */,
 				6BE661CC2769C593001867C5 /* WX20211215-143826.png in Resources */,
 				6B6F3419276B046A00882056 /* WX20211216-132105.png in Resources */,
 				6BE661BA276884CE001867C5 /* character.md in Resources */,
@@ -400,6 +407,7 @@
 				6BE661BE276884CE001867C5 /* closure.md in Resources */,
 				6BE661BF276884CE001867C5 /* enumerate.md in Resources */,
 				6BE661C0276884CE001867C5 /* classstruct.md in Resources */,
+				6B0ED283277D9C2F00A0E40C /* WX20211230-154919.png in Resources */,
 				6BE661C827689191001867C5 /* WX20211214-164643.png in Resources */,
 				6BE661C1276884CE001867C5 /* property.md in Resources */,
 				6B6F3413276ADAED00882056 /* WX20211216-102349.png in Resources */,
