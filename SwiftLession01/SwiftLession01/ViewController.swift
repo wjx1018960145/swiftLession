@@ -27,6 +27,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             self.navigationController?.pushViewController(BaseViewController(), animated: true)
         }else if indexPath.row == 2{
             self.navigationController?.pushViewController(UIKitViewController(), animated: true)
+        }else if indexPath.row == 3{
+            self.navigationController?.pushViewController(TripartiteListVC(), animated: true)
         }
                 
     }

@@ -12,6 +12,12 @@
 		6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */; };
 		6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED286277DA16200A0E40C /* WX20211230-161158.png */; };
 		6B0ED289277DA7E900A0E40C /* WX20211230-163940.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED288277DA7E900A0E40C /* WX20211230-163940.png */; };
+		6B4C2A0B27B3998A00F92AF5 /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C2A0727B3998A00F92AF5 /* BubbleTabBar.swift */; };
+		6B4C2A0D27B3998A00F92AF5 /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C2A0927B3998A00F92AF5 /* BubbleTabBarController.swift */; };
+		6B4C2A0E27B3998A00F92AF5 /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C2A0A27B3998A00F92AF5 /* CBTabBarButton.swift */; };
+		6B4C2A1027B399D800F92AF5 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C2A0F27B399D800F92AF5 /* SampleViewController.swift */; };
+		6B4C2A1227B39AD400F92AF5 /* TripartiteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C2A1127B39AD300F92AF5 /* TripartiteListVC.swift */; };
+		6B4C2A1427B39BD700F92AF5 /* Tripartite.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6B4C2A1327B39AF700F92AF5 /* Tripartite.geojson */; };
 		6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */; };
 		6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C12766EA9200C477A5 /* ViewController.swift */; };
 		6B5CF6C52766EA9200C477A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CF6C32766EA9200C477A5 /* Main.storyboard */; };
@@ -81,6 +87,12 @@
 		6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-155144.png"; sourceTree = "<group>"; };
 		6B0ED286277DA16200A0E40C /* WX20211230-161158.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-161158.png"; sourceTree = "<group>"; };
 		6B0ED288277DA7E900A0E40C /* WX20211230-163940.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-163940.png"; sourceTree = "<group>"; };
+		6B4C2A0727B3998A00F92AF5 /* BubbleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
+		6B4C2A0927B3998A00F92AF5 /* BubbleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
+		6B4C2A0A27B3998A00F92AF5 /* CBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
+		6B4C2A0F27B399D800F92AF5 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		6B4C2A1127B39AD300F92AF5 /* TripartiteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripartiteListVC.swift; sourceTree = "<group>"; };
+		6B4C2A1327B39AF700F92AF5 /* Tripartite.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tripartite.geojson; sourceTree = "<group>"; };
 		6B5CF6BA2766EA9100C477A5 /* SwiftLession01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLession01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5CF6BD2766EA9200C477A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5CF6C12766EA9200C477A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +179,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6B4C2A0427B3995A00F92AF5 /* Tripartite */ = {
+			isa = PBXGroup;
+			children = (
+				6B4C2A0527B3996A00F92AF5 /* tabbar */,
+			);
+			path = Tripartite;
+			sourceTree = "<group>";
+		};
+		6B4C2A0527B3996A00F92AF5 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				6B4C2A0627B3998A00F92AF5 /* Classes */,
+				6B4C2A0F27B399D800F92AF5 /* SampleViewController.swift */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		6B4C2A0627B3998A00F92AF5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6B4C2A0727B3998A00F92AF5 /* BubbleTabBar.swift */,
+				6B4C2A0927B3998A00F92AF5 /* BubbleTabBarController.swift */,
+				6B4C2A0A27B3998A00F92AF5 /* CBTabBarButton.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		6B5CF6B12766EA9100C477A5 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +231,7 @@
 		6B5CF6BC2766EA9100C477A5 /* SwiftLession01 */ = {
 			isa = PBXGroup;
 			children = (
+				6B4C2A0427B3995A00F92AF5 /* Tripartite */,
 				6BE661C427688A17001867C5 /* image */,
 				6BE661C3276885F1001867C5 /* md */,
 				6B5CF76027682D8200C477A5 /* Utils */,
@@ -207,6 +247,7 @@
 				6B5CF75C27674AAA00C477A5 /* MarkDownViewController.swift */,
 				6B5CF763276832C200C477A5 /* BaseViewController.swift */,
 				6B5CF7652768360900C477A5 /* UIKitViewController.swift */,
+				6B4C2A1127B39AD300F92AF5 /* TripartiteListVC.swift */,
 			);
 			path = SwiftLession01;
 			sourceTree = "<group>";
@@ -233,6 +274,7 @@
 			children = (
 				6B5CF75F27682D6200C477A5 /* Base.geojson */,
 				6B5CF7672768366900C477A5 /* UIkit.geojson */,
+				6B4C2A1327B39AF700F92AF5 /* Tripartite.geojson */,
 			);
 			path = JSONFile;
 			sourceTree = "<group>";
@@ -407,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4C2A1427B39BD700F92AF5 /* Tripartite.geojson in Resources */,
 				6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */,
 				6BE661B9276884CE001867C5 /* operation.md in Resources */,
 				6BE661D02769CB03001867C5 /* WX20211215-150407.png in Resources */,
@@ -509,12 +552,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4C2A1227B39AD400F92AF5 /* TripartiteListVC.swift in Sources */,
 				6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */,
 				6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */,
+				6B4C2A1027B399D800F92AF5 /* SampleViewController.swift in Sources */,
+				6B4C2A0B27B3998A00F92AF5 /* BubbleTabBar.swift in Sources */,
 				6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */,
 				6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */,
 				6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */,
 				6B5CF75D27674AAA00C477A5 /* MarkDownViewController.swift in Sources */,
+				6B4C2A0D27B3998A00F92AF5 /* BubbleTabBarController.swift in Sources */,
+				6B4C2A0E27B3998A00F92AF5 /* CBTabBarButton.swift in Sources */,
 				6B5CF764276832C200C477A5 /* BaseViewController.swift in Sources */,
 				6B5CF76227682E3E00C477A5 /* Utils.swift in Sources */,
 			);
