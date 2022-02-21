@@ -288,6 +288,29 @@ public extension JSPOP where Base: UIApplication {
     /// 打开系统app
     /// - Parameter type: 系统app类型
     static func openSystemApp(type: JKSystemAppType, complete: @escaping ((Bool) -> Void)) {
+        
+        // iOS 10.0 以前
+        guard #available(iOS 10.0, *)  else {
+            let success = UIApplication.shared.openURL(URL(string: type.rawValue)!)
+            if (success) {
+                print("10以前可以跳转")
+                complete(true)
+            } else {
+                print("10以前不能完成跳转")
+                complete(false)
+            }
+            return
+        }
+        // iOS 10.0 以后
+        UIApplication.shared.open(URL(string: type.rawValue)!, options: [:]) { (success) in
+            if (success) {
+                print("10以后可以跳转url")
+                complete(true)
+            } else {
+                print("10以后不能完成跳转")
+                complete(false)
+            }
+        }
 //        JKGlobalTools.openUrl(url: URL(string: type.rawValue)!, complete: complete)
     }
     
@@ -295,6 +318,28 @@ public extension JSPOP where Base: UIApplication {
     /// 打开第三方app
     /// - Parameter type: 第三方app类型
     static func openThirdPartyApp(type: JKThirdPartyAppType, complete: @escaping ((Bool) -> Void)) {
+        // iOS 10.0 以前
+        guard #available(iOS 10.0, *)  else {
+            let success = UIApplication.shared.openURL(URL(string: type.rawValue)!)
+            if (success) {
+                print("10以前可以跳转")
+                complete(true)
+            } else {
+                print("10以前不能完成跳转")
+                complete(false)
+            }
+            return
+        }
+        // iOS 10.0 以后
+        UIApplication.shared.open(URL(string: type.rawValue)!, options: [:]) { (success) in
+            if (success) {
+                print("10以后可以跳转url")
+                complete(true)
+            } else {
+                print("10以后不能完成跳转")
+                complete(false)
+            }
+        }
 //        JKGlobalTools.openUrl(url: URL(string: type.rawValue)!, complete: complete)
     }
 }

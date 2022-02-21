@@ -10,6 +10,8 @@
 		313978E13C0D0564DEE33135 /* Pods_SwiftLession01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA58D901ECBAD772897430B9 /* Pods_SwiftLession01.framework */; };
 		6B063A2E27C387370053E307 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063A2D27C387370053E307 /* UIApplication+Extension.swift */; };
 		6B063A3127C387990053E307 /* JXPOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063A3027C387990053E307 /* JXPOP.swift */; };
+		6B063A3327C38AEE0053E307 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063A3227C38AEE0053E307 /* UILabel+Extension.swift */; };
+		6B063A3527C38B4F0053E307 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063A3427C38B4F0053E307 /* UIColor+Extension.swift */; };
 		6B0ED283277D9C2F00A0E40C /* WX20211230-154919.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */; };
 		6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */; };
 		6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED286277DA16200A0E40C /* WX20211230-161158.png */; };
@@ -87,6 +89,8 @@
 		2FCF26416840A7E2DA0D7CDD /* Pods-SwiftLession01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLession01.release.xcconfig"; path = "Target Support Files/Pods-SwiftLession01/Pods-SwiftLession01.release.xcconfig"; sourceTree = "<group>"; };
 		6B063A2D27C387370053E307 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		6B063A3027C387990053E307 /* JXPOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXPOP.swift; sourceTree = "<group>"; };
+		6B063A3227C38AEE0053E307 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		6B063A3427C38B4F0053E307 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-154919.png"; sourceTree = "<group>"; };
 		6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-155144.png"; sourceTree = "<group>"; };
 		6B0ED286277DA16200A0E40C /* WX20211230-161158.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-161158.png"; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				6B063A2D27C387370053E307 /* UIApplication+Extension.swift */,
+				6B063A3227C38AEE0053E307 /* UILabel+Extension.swift */,
+				6B063A3427C38B4F0053E307 /* UIColor+Extension.swift */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -578,10 +584,12 @@
 				6B063A3127C387990053E307 /* JXPOP.swift in Sources */,
 				6B5CF6F02767350A00C477A5 /* CommentsViewController.swift in Sources */,
 				6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */,
+				6B063A3527C38B4F0053E307 /* UIColor+Extension.swift in Sources */,
 				6B4C2A1027B399D800F92AF5 /* SampleViewController.swift in Sources */,
 				6B4C2A0B27B3998A00F92AF5 /* BubbleTabBar.swift in Sources */,
 				6B5CF6EE276730AB00C477A5 /* ThresholdViewController.swift in Sources */,
 				6B063A2E27C387370053E307 /* UIApplication+Extension.swift in Sources */,
+				6B063A3327C38AEE0053E307 /* UILabel+Extension.swift in Sources */,
 				6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */,
 				6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */,
 				6B5CF75D27674AAA00C477A5 /* MarkDownViewController.swift in Sources */,
