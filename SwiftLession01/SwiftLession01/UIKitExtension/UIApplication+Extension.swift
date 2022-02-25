@@ -8,9 +8,9 @@
 import UIKit
 import Photos
 
-extension UIApplication: JSPOPCompatible {}
+extension UIApplication: JXPOPCompatible {}
 // MARK: - 一、基本的扩展
-public extension JSPOP where Base: UIApplication {
+public extension JXPOP where Base: UIApplication {
     
     // MARK: 1.1、获取屏幕的方向
     /// 获取屏幕的方向
@@ -163,7 +163,7 @@ public enum JKAppPermissionType {
     // 定位
     case location
 }
-public extension JSPOP where Base: UIApplication {
+public extension JXPOP where Base: UIApplication {
     
     // MARK: 2.1、判断是否拥有权限，目前支持 照相机、相册、麦克风、定位，提示：这里判断是这些权限有没有被用户手动关闭
     /// 判断是否拥有权限，目前支持 照相机、相册、麦克风、定位，提示：这里判断是这些权限有没有被用户手动关闭
@@ -191,7 +191,7 @@ public extension JSPOP where Base: UIApplication {
 
 // MARK: - 三、打开系统应用和第三方APP
 /// 系统app
-public enum JKSystemAppType: String {
+public enum JXSystemAppType: String {
     case safari = "http://"
     case googleMaps = "http://maps.google.com"
     case Phone = "tel://"
@@ -204,7 +204,7 @@ public enum JKSystemAppType: String {
 }
 
 /// 第三方app
-public enum JKThirdPartyAppType: String {
+public enum JXThirdPartyAppType: String {
     /// 微信
     case weixin = "weixin://"
     /// QQ
@@ -283,11 +283,11 @@ public enum JKThirdPartyAppType: String {
     case xcfapp = " xcfapp://"
 }
  
-public extension JSPOP where Base: UIApplication {
+public extension JXPOP where Base: UIApplication {
     // MARK: 打开系统app
     /// 打开系统app
     /// - Parameter type: 系统app类型
-    static func openSystemApp(type: JKSystemAppType, complete: @escaping ((Bool) -> Void)) {
+    static func openSystemApp(type: JXSystemAppType, complete: @escaping ((Bool) -> Void)) {
         
         // iOS 10.0 以前
         guard #available(iOS 10.0, *)  else {
@@ -317,7 +317,7 @@ public extension JSPOP where Base: UIApplication {
     // MARK: 打开第三方app
     /// 打开第三方app
     /// - Parameter type: 第三方app类型
-    static func openThirdPartyApp(type: JKThirdPartyAppType, complete: @escaping ((Bool) -> Void)) {
+    static func openThirdPartyApp(type: JXThirdPartyAppType, complete: @escaping ((Bool) -> Void)) {
         // iOS 10.0 以前
         guard #available(iOS 10.0, *)  else {
             let success = UIApplication.shared.openURL(URL(string: type.rawValue)!)

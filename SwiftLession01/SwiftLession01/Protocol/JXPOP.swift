@@ -7,30 +7,30 @@
 
 import UIKit
 import Foundation
-public struct JSPOP<Base> {
+public struct JXPOP<Base> {
     let base: Base
     init(_ base: Base) {
         self.base = base
     }
 }
 
-public protocol JSPOPCompatible {}
+public protocol JXPOPCompatible {}
 
-public extension JSPOPCompatible {
+public extension JXPOPCompatible {
     
-    static var jx: JSPOP<Self>.Type {
-        get{ JSPOP<Self>.self }
+    static var jx: JXPOP<Self>.Type {
+        get{ JXPOP<Self>.self }
         set {}
     }
     
-    var jx: JSPOP<Self> {
-        get { JSPOP(self) }
+    var jx: JXPOP<Self> {
+        get { JXPOP(self) }
         set {}
     }
 }
 
 /// Define Property protocol
-internal protocol JSSwiftPropertyCompatible {
+internal protocol JXSwiftPropertyCompatible {
   
     /// Extended type
     associatedtype T
