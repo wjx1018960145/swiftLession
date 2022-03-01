@@ -68,6 +68,10 @@
 		6B063ACE27CC98C40053E307 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063ACD27CC98C30053E307 /* UIScrollView+Extension.swift */; };
 		6B063AD027CC99230053E307 /* UISlider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063ACF27CC99230053E307 /* UISlider+Extension.swift */; };
 		6B063AD227CC995E0053E307 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063AD127CC995E0053E307 /* UIStackView+Extension.swift */; };
+		6B063AD427CDB26A0053E307 /* UISwitch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063AD327CDB2690053E307 /* UISwitch+Extension.swift */; };
+		6B063AD627CDB42A0053E307 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063AD527CDB42A0053E307 /* UITabBar+Extension.swift */; };
+		6B063AD827CDB4440053E307 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063AD727CDB4440053E307 /* UITabBarController+Extension.swift */; };
+		6B063ADA27CDB4C90053E307 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063AD927CDB4C90053E307 /* UITableView+Extension.swift */; };
 		6B0ED283277D9C2F00A0E40C /* WX20211230-154919.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */; };
 		6B0ED285277D9CAA00A0E40C /* WX20211230-155144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */; };
 		6B0ED287277DA16200A0E40C /* WX20211230-161158.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ED286277DA16200A0E40C /* WX20211230-161158.png */; };
@@ -203,6 +207,10 @@
 		6B063ACD27CC98C30053E307 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		6B063ACF27CC99230053E307 /* UISlider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Extension.swift"; sourceTree = "<group>"; };
 		6B063AD127CC995E0053E307 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		6B063AD327CDB2690053E307 /* UISwitch+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Extension.swift"; sourceTree = "<group>"; };
+		6B063AD527CDB42A0053E307 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
+		6B063AD727CDB4440053E307 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		6B063AD927CDB4C90053E307 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		6B0ED282277D9C2E00A0E40C /* WX20211230-154919.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-154919.png"; sourceTree = "<group>"; };
 		6B0ED284277D9CAA00A0E40C /* WX20211230-155144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-155144.png"; sourceTree = "<group>"; };
 		6B0ED286277DA16200A0E40C /* WX20211230-161158.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20211230-161158.png"; sourceTree = "<group>"; };
@@ -326,6 +334,10 @@
 				6B063ACD27CC98C30053E307 /* UIScrollView+Extension.swift */,
 				6B063ACF27CC99230053E307 /* UISlider+Extension.swift */,
 				6B063AD127CC995E0053E307 /* UIStackView+Extension.swift */,
+				6B063AD327CDB2690053E307 /* UISwitch+Extension.swift */,
+				6B063AD527CDB42A0053E307 /* UITabBar+Extension.swift */,
+				6B063AD727CDB4440053E307 /* UITabBarController+Extension.swift */,
+				6B063AD927CDB4C90053E307 /* UITableView+Extension.swift */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -787,6 +799,7 @@
 				6B063A3A27C393A60053E307 /* String+Extension.swift in Sources */,
 				6B063AB627C8BA730053E307 /* CALayer+Extension.swift in Sources */,
 				6B063A9A27C883430053E307 /* NumberFormatter+Extension.swift in Sources */,
+				6B063AD427CDB26A0053E307 /* UISwitch+Extension.swift in Sources */,
 				6B063A9827C883150053E307 /* NSRange+Extension.swift in Sources */,
 				6B063A8F27C875340053E307 /* JXNibLoadable.swift in Sources */,
 				6B5CF7662768360900C477A5 /* UIKitViewController.swift in Sources */,
@@ -798,6 +811,7 @@
 				6B063A3527C38B4F0053E307 /* UIColor+Extension.swift in Sources */,
 				6B063AA227C8A95F0053E307 /* JXCommonTool.swift in Sources */,
 				6B4C2A1027B399D800F92AF5 /* SampleViewController.swift in Sources */,
+				6B063AD827CDB4440053E307 /* UITabBarController+Extension.swift in Sources */,
 				6B4C2A0B27B3998A00F92AF5 /* BubbleTabBar.swift in Sources */,
 				6B063A6127C766240053E307 /* IndexPath+Extension.swift in Sources */,
 				6B063A4827C4C78A0053E307 /* Array+Extension.swift in Sources */,
@@ -814,6 +828,7 @@
 				6B063A4A27C4C8200053E307 /* AVAssetExportSession+Extension.swift in Sources */,
 				6B063A5227C4DF9E0053E307 /* CGFloat+Extension.swift in Sources */,
 				6B063A3327C38AEE0053E307 /* UILabel+Extension.swift in Sources */,
+				6B063ADA27CDB4C90053E307 /* UITableView+Extension.swift in Sources */,
 				6B5CF6C22766EA9200C477A5 /* ViewController.swift in Sources */,
 				6B063ACC27C8CA950053E307 /* UIScreen+Extension.swift in Sources */,
 				6B5CF6BE2766EA9200C477A5 /* AppDelegate.swift in Sources */,
@@ -841,6 +856,7 @@
 				6B063A5827C71F8E0053E307 /* JXJSON.swift in Sources */,
 				6B063ABC27C8C7840053E307 /* NSObject+Extension.swift in Sources */,
 				6B063A5B27C72D1F0053E307 /* JXRegexHelper.swift in Sources */,
+				6B063AD627CDB42A0053E307 /* UITabBar+Extension.swift in Sources */,
 				6B063A5D27C764440053E307 /* NSMutableAttributedString+Extension.swift in Sources */,
 				6B063A4227C4C6780053E307 /* URL+Extension.swift in Sources */,
 				6B5CF76227682E3E00C477A5 /* Utils.swift in Sources */,
