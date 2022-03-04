@@ -29,6 +29,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             self.navigationController?.pushViewController(UIKitViewController(), animated: true)
         }else if indexPath.row == 3{
             self.navigationController?.pushViewController(TripartiteListVC(), animated: true)
+        }else if indexPath.row == 4{
+            self.navigationController?.pushViewController(FoundationExtensionViewController(), animated: true)
         }
                 
     }
@@ -48,7 +50,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
         self.title = "Swift课堂"
-        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方"])
+        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方","Foundation扩展","Protocol","UIKit扩展"])
         createTableview()
         // Do any additional setup after loading the view.
     }
