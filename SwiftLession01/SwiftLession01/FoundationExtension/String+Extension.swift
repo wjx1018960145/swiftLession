@@ -98,7 +98,7 @@ public extension JXPOP where Base: ExpressibleByStringLiteral {
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         // 2.将字符串转换为类
         // 2.1.默认情况下命名空间就是项目的名称，但是命名空间的名称是可以更改的
-        guard let Class: AnyClass = NSClassFromString((base as! String)) else {
+        guard let Class: AnyClass = NSClassFromString(namespace.jx.removeSomeStringUseSomeString(removeString: " ", replacingString: "_") + "." + (base as! String)) else {
             return nil
         }
         return Class
