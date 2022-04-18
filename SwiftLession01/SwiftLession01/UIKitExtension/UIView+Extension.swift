@@ -173,6 +173,30 @@ public let jx_kScreenH16_9: CGFloat = jx_kScreenH * 16.0 / 9.0
 // MARK: - 三、UIView 有关 Frame 的扩展
 public extension JXPOP where Base: UIView {
     
+    // MARK: 3.1、x 的位置
+    /// x 的位置
+    var x: CGFloat {
+        get {
+            return base.frame.origin.x
+        }
+        set(newValue) {
+            var tempFrame: CGRect = base.frame
+            tempFrame.origin.x = newValue
+            base.frame = tempFrame
+        }
+    }
+    // MARK: 3.2、y 的位置
+    /// y 的位置
+    var y: CGFloat {
+        get {
+            return base.frame.origin.y
+        }
+        set(newValue) {
+            var tempFrame: CGRect = base.frame
+            tempFrame.origin.y = newValue
+            base.frame = tempFrame
+        }
+    }
     // MARK: 3.3、height: 视图的高度
     /// height: 视图的高度
     var height: CGFloat {

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+extension URL: JXPOPCompatible {}
 // MARK: - 一、基本的扩展
 public extension JXPOP where Base == URL {
     
