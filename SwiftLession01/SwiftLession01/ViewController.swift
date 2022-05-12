@@ -31,6 +31,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             self.navigationController?.pushViewController(TripartiteListVC(), animated: true)
         }else if indexPath.row == 4{
             self.navigationController?.pushViewController(FoundationExtensionViewController(), animated: true)
+        }else if indexPath.row == 6 {
+            self.navigationController?.pushViewController(UIKitExtensionViewController(), animated: true)
         }
                 
     }

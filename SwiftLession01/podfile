@@ -4,6 +4,7 @@ target 'SwiftLession01' do
 #pod 'SDWebImage','~> 5.12.1'
 pod 'Alamofire'
 pod "MarkdownView",'~> 1.8.3'
+pod 'FDFullscreenPopGesture'
 pod 'SnapKit'
 pod 'MJRefresh'
 end
