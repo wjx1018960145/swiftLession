@@ -15,7 +15,7 @@ class OneViewController: TestBaseViewController {
         self.edgesForExtendedLayout = []
         self.view.backgroundColor = UIColor.randomColor
         
-        fd_prefersNavigationBarHidden = true
+//        fd_prefersNavigationBarHidden = true
         
         let mainPath10 = UIBezierPath()
         mainPath10.move(to: CGPoint(x: 50, y: 50))
