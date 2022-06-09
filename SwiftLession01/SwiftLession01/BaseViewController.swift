@@ -25,9 +25,10 @@ class BaseViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         
         
         createView()
+        self.hidesBottomBarWhenPushed = true
         // Do any additional setup after loading the view.
     }
-    
+   
     
     func createView(){
         tableView = UITableView.init(frame: UIScreen.main.bounds, style: .plain)

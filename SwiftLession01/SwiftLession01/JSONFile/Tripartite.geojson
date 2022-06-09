@@ -7,7 +7,11 @@
     },
     {
         "title":"主题切换支持远程加载适配OC",
-        "vc":
+        "vc":"ThemListViewController"
+    },
+    {
+        "title":"图片选择器",
+        "vc":"ThemListViewController"
     }
    
 ]

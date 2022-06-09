@@ -1,6 +1,15 @@
 ${PODS_ROOT}/Target Support Files/Pods-SwiftLession01/Pods-SwiftLession01-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
 ${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
+${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
+${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework

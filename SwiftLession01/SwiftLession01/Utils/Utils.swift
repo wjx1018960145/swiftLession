@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Foundation
+import MBProgressHUD
 
 class Utils: NSObject {
 
@@ -38,4 +40,18 @@ class Utils: NSObject {
         return dicArr as NSArray
     }
 
+}
+
+
+
+
+extension UIViewController {
+
+    func showHUD(_ text: String) -> MBProgressHUD {
+        let HUD = MBProgressHUD.showAdded(to: view, animated: true)
+        HUD.label.text = text
+        HUD.removeFromSuperViewOnHide = true
+        return HUD
+    }
+    
 }

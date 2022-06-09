@@ -21,48 +21,104 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(dataSource[indexPath.row])
+        
         if indexPath.row == 0{
-            self.navigationController?.pushViewController(ThresholdViewController(), animated: true)
+           let vc = ThresholdViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 1 {
-            self.navigationController?.pushViewController(BaseViewController(), animated: true)
+            let vc = BaseViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 2{
-            self.navigationController?.pushViewController(UIKitViewController(), animated: true)
+            let vc = UIKitViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 3{
-            self.navigationController?.pushViewController(TripartiteListVC(), animated: true)
+            let vc = TripartiteListVC()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 4{
-            self.navigationController?.pushViewController(FoundationExtensionViewController(), animated: true)
+            let vc = FoundationExtensionViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 6 {
-            self.navigationController?.pushViewController(UIKitExtensionViewController(), animated: true)
+            let vc = UIKitExtensionViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 7{
+            Themes.switchToNext()
         }
                 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview?.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
-        cell?.textLabel?.text = dataSource[indexPath.row] as? String
-        cell?.accessoryType = .disclosureIndicator
-        return cell!
+//        let cell = tableview?.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
+        
+        let cell = tableView.jx.dequeueReusableCell(cellType: TableViewCell.self, cellForRowAt: indexPath)
+        
+        cell.contentLabel.text = dataSource[indexPath.row] as? String
+//        cell?.textLabel?.textColor = UIColor.black
+//        cell?.accessoryType = .disclosureIndicator
+//        cell?.backgroundColor = UIColor.white
+        cell.selectionStyle = .none
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 192
     }
     
     
-    
-    
-
+    private var isTabBarHidden = false // TabBar是否隐藏
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.gray
-        self.title = "Swift课堂"
-        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方","Foundation扩展","Protocol","UIKit扩展"])
+//        self.view.backgroundColor = UIColor.white
+        
+      
+        
+        if #available(iOS 15.0, *) {
+//             let app = UINavigationBarAppearance()
+//             app.configureWithOpaqueBackground()  // 重置背景和阴影颜色
+//             app.titleTextAttributes = [
+//                   NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),
+//                   NSAttributedString.Key.foregroundColor: UIColor.white
+//             ]
+//             app.backgroundColor = UIColor.init(hexString: "#2C81EC")  // 设置导航栏背景色
+//             app.shadowColor = .clear
+//             UINavigationBar.appearance().scrollEdgeAppearance = app  // 带scroll滑动的页面
+//             UINavigationBar.appearance().standardAppearance = app // 常规页面。描述导航栏以标准高度
+        }
+        self.title = "Events"
+        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方","Foundation扩展","Protocol","UIKit扩展","测试主题"])
         createTableview()
         // Do any additional setup after loading the view.
     }
+    func inverseColor() {
+        view.backgroundColor = #colorLiteral(red: 0.1579992771, green: 0.1818160117, blue: 0.5072338581, alpha: 1)
+//        lblTitle.textColor = UIColor.white
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return view.backgroundColor == UIColor.white ? .default : .lightContent
+    }
+
+    
     func  createTableview(){
-        tableview = UITableView.init(frame: UIScreen.main.bounds,style: .plain)
+        tableview = UITableView.init(frame: CGRect(x: 10, y: 100, width: self.view.frame.size.width-20, height: self.view.frame.size.height-280),style: .plain)
         tableview?.dataSource = self
         tableview?.delegate = self;
-        tableview?.register(UITableViewCell.self, forCellReuseIdentifier: "CellId")
+        tableview?.estimatedRowHeight = 80.0
+        tableview?.backgroundColor = UIColor.clear
+        tableview?.jx.register(cellClass: TableViewCell.self)
+        tableview?.layer.masksToBounds = true
+        tableview?.layer.cornerRadius = 10.0
         //去掉多余的分割线
         tableview?.tableFooterView = UIView()
+        //去除滚动条
+        tableview?.showsVerticalScrollIndicator = false
         self.view.addSubview(tableview!)
         
         

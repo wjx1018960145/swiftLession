@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 15.0, tvOS 15.0, *)
 @objc public final class ThemeNavigationBarAppearancePicker: ThemePicker {
 
     public convenience init(keyPath: String, map: @escaping (Any?) -> UINavigationBarAppearance?) {
@@ -25,7 +25,7 @@ import UIKit
 
 }
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 15.0, tvOS 15.0, *)
 @objc public extension ThemeNavigationBarAppearancePicker {
 
     class func pickerWithKeyPath(_ keyPath: String, map: @escaping (Any?) -> UINavigationBarAppearance?) -> ThemeNavigationBarAppearancePicker {
@@ -35,8 +35,6 @@ import UIKit
     class func pickerWithAppearances(_ appearances: [UINavigationBarAppearance]) -> ThemeNavigationBarAppearancePicker {
         return ThemeNavigationBarAppearancePicker(v: { ThemeManager.element(for: appearances) })
     }
-
 }
-
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 15.0, tvOS 15.0, *)
 extension ThemeNavigationBarAppearancePicker: ExpressibleByArrayLiteral {}

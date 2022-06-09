@@ -7,7 +7,9 @@
 
 import UIKit
 import Foundation
+
 import MarkdownView
+
 class MarkDownViewController: UIViewController {
 
     var titleStr:String?
@@ -24,7 +26,11 @@ class MarkDownViewController: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
         self.title = titleStr
-      view.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            // Fallback on earlier versions
+        }
       
 //      let plugins = [
 //        URL(string: "https://cdnjs.cloudflare.com/ajax/libs/markdown-it-footnote/3.0.3/markdown-it-footnote.js")!,

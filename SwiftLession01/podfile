@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '12.0'
 use_frameworks!
 target 'SwiftLession01' do
 #pod 'SDWebImage','~> 5.12.1'
@@ -7,5 +7,10 @@ pod "MarkdownView",'~> 1.8.3'
 pod 'FDFullscreenPopGesture'
 pod 'SnapKit'
 pod 'MJRefresh'
+pod 'SSZipArchive'
+pod 'MBProgressHUD'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod "Texture"
 end
 

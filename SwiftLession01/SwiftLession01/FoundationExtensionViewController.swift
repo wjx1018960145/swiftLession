@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FoundationExtensionViewController :UIViewController {
+class FoundationExtensionViewController :BaseVC {
    
     
     
@@ -19,7 +19,7 @@ class FoundationExtensionViewController :UIViewController {
     //完成的类
     fileprivate var finishedDataArray :[String] = []
     lazy var tableview :UITableView = {
-        let tableview = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: jx_kScreenH-CGFloat(jx_kNavFrameH)), style: .grouped)
+        let tableview = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: jx_kScreenH), style: .grouped)
         if #available(iOS 11, *){
             tableview.estimatedSectionFooterHeight = 0
             tableview.estimatedSectionHeaderHeight = 0
@@ -48,8 +48,18 @@ class FoundationExtensionViewController :UIViewController {
         dataArray = ["Array+Extension", "DispatchQueue+Extension", "NumberFormatter+Extension", "CLLocation+Extension", "NSRange+Extension", "Range+Extension", "AVAssetExportSession+Extension", "NSIndexPath+Extension", "Bundle+Extension", "UserDefaults+Extension", "Date+Extension", "NSObject+Extension", "String+Extension", "UIDevice+Extension", "UIFont+Extension", "Timer+Extension", "Int+Extension", "Double+Extension", "UInt+Extension", "Int64+Extension", "Float+Extension", "Data+Extension", "Bool+Extension", "CGFloat+Extension", "Character+Extension", "DateFormatter+Extension", "Dictionary+Extension", "FileManager+Extension", "URL+Extension", "NSDecimalNumberHandler+Extension", "NSAttributedString+Extension", "NSMutableAttributedString+Extension"]
         finishedDataArray = ["String+Extension", "NumberFormatter+Extension", "Range+Extension", "CLLocation+Extension", "NSRange+Extension", "AVAssetExportSession+Extension", "Data+Extension", "Date+Extension", "Character+Extension", "Int+Extension", "Int64+Extension", "UIFont+Extension", "Bool+Extension", "DispatchQueue+Extension", "CGFloat+Extension", "Float+Extension", "UIDevice+Extension", "UInt+Extension", "URL+Extension", "UserDefaults+Extension", "Double+Extension", "FileManager+Extension", "NSDecimalNumberHandler+Extension", "Bundle+Extension", "NSAttributedString+Extension"]
         initUI()
+        
+        if #available(iOS 15, *) {
+                  let appearance = UINavigationBarAppearance()
+                  appearance.configureWithOpaqueBackground()
+                  appearance.shadowImage = UIImage()
+                  appearance.backgroundColor = .clear
+                  UINavigationBar.appearance().standardAppearance = appearance
+                  UINavigationBar.appearance().scrollEdgeAppearance = appearance
+              }
     }
     
+   
     
     private func initUI() {
         

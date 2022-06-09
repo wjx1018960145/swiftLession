@@ -26,8 +26,9 @@ class BaseViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.contentView.backgroundColor = .clear
         self.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        self.backgroundColor = .white
+//        self.backgroundColor = .white
         self.contentView.addSubview(contentLabel)
         self.contentView.addSubview(lineView)
         contentLabel.snp.makeConstraints { (make) in

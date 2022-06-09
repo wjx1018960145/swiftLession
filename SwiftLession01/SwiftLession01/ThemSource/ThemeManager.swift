@@ -46,8 +46,8 @@ public enum ThemePath {
     @objc public static var animationDuration = 0.3
     
     @objc public fileprivate(set) static var currentTheme: NSDictionary?
-    @objc public fileprivate(set) static var currentThemeIndex: Int = 0
-    
+    @objc public static var currentThemeIndex: Int = 0
+    @objc public var currentThemeName: Int = 0
     public fileprivate(set) static var currentThemePath: ThemePath?
 
 }
@@ -58,6 +58,7 @@ public extension ThemeManager {
         currentThemeIndex = index
         NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: nil)
     }
+   
     
     class func setTheme(plistName: String, path: ThemePath) {
         guard let plistPath = path.plistPath(name: plistName) else {
@@ -89,7 +90,7 @@ public extension ThemeManager {
     class func setTheme(dict: NSDictionary, path: ThemePath) {
         currentTheme = dict
         currentThemePath = path
-        NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: dict)
     }
     
 }

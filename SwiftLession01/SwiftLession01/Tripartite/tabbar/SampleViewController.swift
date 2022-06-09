@@ -11,6 +11,7 @@ class SampleViewController: UIViewController {
     var lblTitle: UILabel = {
         var label = UILabel()
         label.textColor = #colorLiteral(red: 0.1579992771, green: 0.1818160117, blue: 0.5072338581, alpha: 1)
+        
         label.font = UIFont.systemFont(ofSize: 55.0, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

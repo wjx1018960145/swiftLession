@@ -24,6 +24,7 @@ class TripartiteListVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         tableView = UITableView.init(frame: UIScreen.main.bounds, style: .plain)
         tableView?.dataSource = self
         tableView?.delegate = self
+        tableView?.backgroundColor = UIColor.white
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(tableView!)
     }
@@ -37,6 +38,8 @@ class TripartiteListVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         
         cell.textLabel?.text = (dataSource?[indexPath.row] as! NSDictionary)["title"] as! String
         cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.textColor = .black
+        cell.backgroundColor = .white
         return cell
     }
 
@@ -59,6 +62,15 @@ class TripartiteListVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             tabBarController.viewControllers = [eventsVC, searchVC, activityVC, settingsVC]
             tabBarController.tabBar.tintColor = #colorLiteral(red: 0.1579992771, green: 0.1818160117, blue: 0.5072338581, alpha: 1)
             self.navigationController?.pushViewController(tabBarController, animated: true)
+        }else{
+            let cellName = dic["vc"] as! String
+            let vcName = cellName
+            guard let vc = vcName.jx.toViewController() else {
+               print("没有该名字的控制器：\(vcName)")
+                return
+            }
+            vc.title = dic["title"] as! String
+            navigationController?.pushViewController(vc, animated: true)
         }
         
     }

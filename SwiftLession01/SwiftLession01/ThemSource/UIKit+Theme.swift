@@ -97,17 +97,17 @@ import UIKit
         get { return getThemePicker(self, "setLargeTitleTextAttributes:") as? ThemeStringAttributesPicker }
         set { setThemePicker(self, "setLargeTitleTextAttributes:", newValue) }
     }
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 15.0, tvOS 15.0, *)
     var theme_standardAppearance: ThemeNavigationBarAppearancePicker? {
         get { return getThemePicker(self, "setStandardAppearance:") as? ThemeNavigationBarAppearancePicker }
         set { setThemePicker(self, "setStandardAppearance:", newValue) }
     }
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 15.0, tvOS 15.0, *)
     var theme_compactAppearance: ThemeNavigationBarAppearancePicker? {
         get { return getThemePicker(self, "setCompactAppearance:") as? ThemeNavigationBarAppearancePicker }
         set { setThemePicker(self, "setCompactAppearance:", newValue) }
     }
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 15.0, tvOS 15.0, *)
     var theme_scrollEdgeAppearance: ThemeNavigationBarAppearancePicker? {
         get { return getThemePicker(self, "setScrollEdgeAppearance:") as? ThemeNavigationBarAppearancePicker }
         set { setThemePicker(self, "setScrollEdgeAppearance:", newValue) }
@@ -115,6 +115,9 @@ import UIKit
 }
 @objc public extension UITabBar
 {
+    
+    
+    
     #if os(iOS)
     var theme_barStyle: ThemeBarStylePicker? {
         get { return getThemePicker(self, "setBarStyle:") as? ThemeBarStylePicker }
@@ -397,7 +400,7 @@ import UIKit
         set { setThemePicker(self, "setEffect:", newValue) }
     }
 }
-@available(iOS 13.0, *)
+@available(iOS 15.0, *)
 @objc public extension UINavigationBarAppearance
 {
     var theme_titleTextAttributes: ThemeStringAttributesPicker? {

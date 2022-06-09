@@ -126,7 +126,7 @@ extension NSObject {
             UIView.animate(withDuration: ThemeManager.animationDuration) {
                 self.performThemePicker(selector: selector, picker: picker)
                 // For iOS 13, force an update of the nav bar when the theme changes.
-                if #available(iOS 13.0, *) {
+                if #available(iOS 15.0, *) {
                     if let navBar = self as? UINavigationBar {
                         navBar.setNeedsLayout()
                     }
