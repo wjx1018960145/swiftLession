@@ -84,7 +84,7 @@ public extension ThemeManager {
             print("SwiftTheme WARNING: Can't read json '\(jsonName)' at: \(jsonPath)")
             return
         }
-        self.setTheme(dict: jsonDict, path: path)
+        self.setTheme(dict: jsonDict, path: path)		
     }
     
     class func setTheme(dict: NSDictionary, path: ThemePath) {
