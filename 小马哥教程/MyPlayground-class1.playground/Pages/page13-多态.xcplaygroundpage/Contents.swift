@@ -2,6 +2,7 @@
 
 import Foundation
 import CoreGraphics
+import Darwin
 
 
 
@@ -154,6 +155,20 @@ var p4 = p3(name:"")
 //： * 可失败初始化器可以调用非可失败初始化器，非可失败初始化器调用可失败初始化器需要进行解包
 //: * 如果初始化器调用一个可失败初始化器导致初始化失败，那么整个初始化过程都失败，并且之后的代码都停止执行
 
+//: * 反初始化器（deint）
+// : - deinit叫做反初始化器，类似c++的析构函数，OC里的Dealloc
+//: - 当类的实例对象被释放内存时，就会调用实例对象的deinit方法
+class Persion {
+    deinit {
+        print("销毁")
+    }
+}
+
+// deinit 不接受任何参数 不能写小括号，不能自行调用
+// 父类的deinit能被子类继承
+// 子类的deinit 实现执行完毕后会调用父类的deinit
+
+//: * 可选链
 
 
 
