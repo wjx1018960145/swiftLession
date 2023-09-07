@@ -1,6 +1,7 @@
 //: [上一页](@previous)
 
 import Foundation
+import CoreGraphics
 
 
 
@@ -79,10 +80,79 @@ var s2 = Student(age: 10, name: "Rose")
 // 重写
 // 当重写父类的指定初始化器时，必须加上override （即使子类的实现是便捷初始化器）
 // 如果子类写了一个匹配父类便捷初始化器的初始化器，不用加override
+//因为父类的便捷初始化器永远不会通过子类直接调用，因此 严格的说子类无法重写父类的便捷初始化器
+
+//: *自动继承
+//:- 1如果子类没有定义任何指定初始化器，它会自动继承父类所有的指定初始化器
+//:- 2如果子类提供了父类所有指定初始化器的实现（要么通过方式1继承，要么重写）
+//:   1 子类自动继承所有的父类便捷初始化器
+//: 3 就算子类添加了更多的便捷初始化器，这些规则仍然适用
+//: 4 子类便捷初始化器的形式重写父类的指定初始化器，也可以作为满足规则2的一部分
 
 
+//: * Required
+//: - 用required修饰指定初始化器，表明其所有的子类都必须实现该初始化器（通过继承或者重写实现）
+//: - 如果子类重写看了required初始化器，也必须加上required 不用加override
+
+class Persons{
+    required init(){
+        
+    }
+    
+}
+
+class Students:Persons{
+    required init(){
+        super.init()
+    }
+}
+
+//:*属性观察器
+//: - 父类的属性在它自己的初始化器中赋值不会触发属性观察器，但在子类的初始化器中赋值会触发属性观察器
+class P1{
+    var age:Int{
+        willSet{
+            print("willSet")
+        }
+        didSet {
+            print("didSet")
+        }
+        
+    }
+    init(){
+        self.age = 0
+    }
+}
+
+class p2:P1 {
+    override init() {
+        super.init()
+        self.age = 1;
+    }
+    
+}
+
+var stu = p2()
 
 
+// 可失败初始化器
+//:* 类 结构体，枚举都可以使用init定义可失败初始化器
+//: -
+class p3 {
+    var name:String
+    init?(name:String){
+        if name.isEmpty {
+            return nil
+        }
+        self.name = name
+    }
+}
+
+var p4 = p3(name:"")
+//: * 不允许同时定义参数标签，参数个数，参数类型相同的可失败初始化器和非可失败初始化器 造成混淆不知道调用哪个
+//: * 可以用init！定义隐式解包的可失败初始化器
+//： * 可失败初始化器可以调用非可失败初始化器，非可失败初始化器调用可失败初始化器需要进行解包
+//: * 如果初始化器调用一个可失败初始化器导致初始化失败，那么整个初始化过程都失败，并且之后的代码都停止执行
 
 
 
