@@ -33,7 +33,7 @@ public class HEBaseViewController: UIViewController {
         
         view.backgroundColor = UIColor.background
         if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+//            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }

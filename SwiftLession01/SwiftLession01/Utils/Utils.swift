@@ -39,6 +39,12 @@ class Utils: NSObject {
         let dicArr  = try! JSONSerialization.jsonObject(with: loadBundleJSONFile(fileName), options: .allowFragments) as! [[String:AnyObject]]
         return dicArr as NSArray
     }
+    
+    func getlockSourceForDic(fileName:String)->NSDictionary{
+        
+        let dicDic  = try! JSONSerialization.jsonObject(with: loadBundleJSONFile(fileName), options: .allowFragments) as! [String:AnyObject]
+        return dicDic as NSDictionary
+    }
 
 }
 

@@ -1,0 +1,30 @@
+{
+	"config":{
+		"updateReqRate":16400,
+		"limitReqRate":13600,
+		"appPoolLimit":3,
+		"versionRefreshRate":86400
+	},
+	"data":[
+		{
+			"app_desc":"华腾宝",
+			"app_id":"12345678",
+			"auto_install":1,
+			"fallback_base_url":"http://172.17.6.52:8095/mcube/C06E4F7260906-sit/12345678/1.0.0.186_all/nebula/fallback/",
+			"global_pack_url":"",
+			"icon_url":"",
+			"installType":1,
+			"main_url":"/www/html/login.html",
+			"name":"华腾宝",
+			"online":1,
+			"package_url":"https://172.17.6.52:8095/mcube/12345678/1.0.0.186_all/nebula/12345678_1.0.0.186.amr",
+			"patch":"",
+			"sub_url":"",
+			"version":"1.0.0.186",
+			"vhost":"https://12345678.h5app.com"
+		}
+	],
+	"resultCode":100,
+	"resultMsg":"操作成功",
+	"state":"success"
+}

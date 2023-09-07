@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ViewAnimator
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     var tableview :UITableView?
@@ -24,30 +24,36 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         if indexPath.row == 0{
            let vc = ThresholdViewController()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 1 {
             let vc = BaseViewController()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 2{
             let vc = UIKitViewController()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 3{
             let vc = TripartiteListVC()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 4{
             let vc = FoundationExtensionViewController()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 6 {
             let vc = UIKitExtensionViewController()
+            vc.title = dataSource[indexPath.row] as? String
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 7{
-            Themes.switchToNext()
+//            Themes.switchToNext()
         }
                 
     }
@@ -92,8 +98,18 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 //             UINavigationBar.appearance().standardAppearance = app // 常规页面。描述导航栏以标准高度
         }
         self.title = "Events"
-        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方","Foundation扩展","Protocol","UIKit扩展","测试主题"])
+        self.dataSource = NSMutableArray.init(array: ["入门介绍","基础知识","UIKit","常用第三方","Foundation扩展","Protocol","UIKit扩展"])
         createTableview()
+        
+        let fromAnimation = AnimationType.vector(CGVector(dx: 30, dy: 0))
+        let zoomAnimation = AnimationType.zoom(scale: 0.2)
+        let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+//        UIView.animate(views: collectionView.visibleCells,
+//                       animations: [zoomAnimation, rotateAnimation],
+//                       duration: 0.5)
+        
+        UIView.animate(views: tableview!.visibleCells ,
+                       animations: [fromAnimation, zoomAnimation], delay: 0.5)
         // Do any additional setup after loading the view.
     }
     func inverseColor() {

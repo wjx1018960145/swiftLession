@@ -1,0 +1,6 @@
+framework module KKJSBridge {
+  umbrella header "KKJSBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

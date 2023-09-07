@@ -24,7 +24,7 @@
 //  THE SOFTWARE.
 
 import UIKit
-import HEPhotoPicker
+
 import Photos
 //屏宽
 let kScreenWidth = UIScreen.main.bounds.size.width

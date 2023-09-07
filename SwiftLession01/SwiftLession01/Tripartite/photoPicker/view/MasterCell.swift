@@ -28,14 +28,58 @@ import Photos
 
 class MasterCell: UICollectionViewCell {
     typealias MasterCellHandle = ()->Void
-    @IBOutlet weak var closeBtn: UIButton!
+    lazy var closeBtn: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage.init(named: "close-btn"), for: .normal)
+        button.addTarget(self, action: #selector(closeBtnClick), for: .touchUpInside)
+        return button
+    }()
     var closeBtnClickHandle : MasterCellHandle?
-    @IBOutlet weak var imageView: UIImageView!
+    lazy var imageView: UIImageView={
+        let image = UIImageView()
+        image.isUserInteractionEnabled = true
+        return image
+    }()
     var representedAssetIdentifier : String!
-    @IBOutlet weak var durationLab: UILabel!
-    @IBOutlet weak var durationBackView: UIView!
+    lazy var durationLab: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.textAlignment = .right
+        label.font = UIFont.italicSystemFont(ofSize: 10)
+        return label
+    }()
+    lazy var durationBackView: UIView = {
+        let timeView = UIView()
+        return timeView
+    }()
+    
     var mediaModel:HEPhotoAsset!{
         didSet{
+            
+            self.addSubview(imageView)
+            imageView.addSubview(durationBackView)
+            durationBackView.addSubview(durationLab)
+            imageView.addSubview(closeBtn)
+            imageView.snp.makeConstraints { make in
+                make.center.equalToSuperview()
+                make.size.equalTo(111)
+            }
+            durationBackView.snp.makeConstraints { make in
+                make.height.equalTo(20)
+                make.width.equalToSuperview()
+                make.bottom.equalToSuperview()
+            }
+            durationLab.snp.makeConstraints { make in
+                make.height.equalTo(20)
+                make.width.equalTo(100)
+                make.right.equalToSuperview()
+                make.bottom.equalToSuperview()
+            }
+            closeBtn.snp.makeConstraints { make in
+                make.top.equalToSuperview()
+                make.right.equalToSuperview()
+                make.size.equalTo(22)
+            }
             imageView.image = UIImage()
 
             let scale : CGFloat = 1.5
@@ -69,6 +113,7 @@ class MasterCell: UICollectionViewCell {
         super.awakeFromNib()
         setMaskColor()
     }
+     
     func setMaskColor(){
         let maskLayer = CAGradientLayer()
         maskLayer.colors = [UIColor.clear.cgColor,UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor]
@@ -76,10 +121,10 @@ class MasterCell: UICollectionViewCell {
         maskLayer.endPoint = CGPoint.init(x: 0, y: 1)
         maskLayer.locations = [0,1]
         maskLayer.borderWidth = 0
-        self.durationBackView?.layer.insertSublayer(maskLayer, at: 0)
+        self.durationBackView.layer.insertSublayer(maskLayer, at: 0)
         maskLayer.frame = self.durationBackView.bounds 
     }
-    @IBAction func closeBtnClick(_ sender: Any) {
+   @objc func closeBtnClick(_ sender: Any) {
         if let blcok = closeBtnClickHandle{
             blcok()
         }

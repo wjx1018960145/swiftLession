@@ -1,8 +1,10 @@
-platform :ios, '12.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'#手机的系统
 use_frameworks!
 target 'SwiftLession01' do
 #pod 'SDWebImage','~> 5.12.1'
 pod 'Alamofire'
+pod 'Kingfisher','~> 6.0'#处理图片 类似OC的SDWImage
 pod "MarkdownView",'~> 1.8.3'
 pod 'FDFullscreenPopGesture'
 pod 'SnapKit'
@@ -12,5 +14,20 @@ pod 'MBProgressHUD'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod "Texture"
+pod 'CryptoSwift'
+pod 'JXBanner'#轮播图
+#pod 'HZPlaceHolder/PlaceHolderView'
+#pod 'HZPlaceHolder/Refresh'
+pod 'HGPlaceholders'#占位符
+pod 'Reveal-SDK', :configurations => ['Debug']
+pod 'NotificationBannerSwift'#消息通知提示
+pod "ViewAnimator"#动画
+#pod 'URLNavigator'#路由器
+pod 'JLRoutes'
+pod 'Cache'
+pod 'WKWebViewJavascriptBridge', '~> 1.2.0'
+pod 'KKJSBridge/AjaxProtocolHook'
+pod 'SwiftEventBus', :tag => '3.0.1', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
+
 end
 

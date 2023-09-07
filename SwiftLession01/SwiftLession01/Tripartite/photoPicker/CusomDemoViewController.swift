@@ -25,6 +25,7 @@
 
 import UIKit
 import Photos
+import RxSwift
 
 
 class CusomDemoViewController: UIViewController {
@@ -32,14 +33,95 @@ class CusomDemoViewController: UIViewController {
     @IBOutlet weak var singleVideoView: UIView!
     
     @IBOutlet weak var singleImageView: UIView!
-    @IBOutlet weak var pickerTypeSegment: UISegmentedControl!
-    @IBOutlet weak var ascendingSwitch: UISwitch!
-    @IBOutlet weak var videoSwitch: UISwitch!
-    @IBOutlet weak var pickturSwitch: UISwitch!
-    @IBOutlet weak var maxCountTextfield: UITextField!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var accumulationSwitch: UISwitch!
-    @IBOutlet weak var macCountOfVideoTextfield: UITextField!
+    
+   lazy var pickerTypeSegment: UISegmentedControl = {
+        let items = ["image", "video", "img&V","imgOrV"] as [Any]
+        let segmented = UISegmentedControl(items:items)
+        segmented.frame = CGRect(x: 0, y: 200, width: KScreenWidth, height: 30)
+        segmented.selectedSegmentIndex = 0 //默认选中第二项
+        segmented.addTarget(self, action: #selector(segumentClick), for: .valueChanged)  //添加值改变监听
+        segmented.tintColor = .blue
+        return segmented
+    }()
+    lazy var ascendingSwitchDesLab: UILabel = {
+        let des = UILabel()
+        des.text = "是否根据图片创建时间升序展示"
+        des.textColor = .black
+        return des
+    }()
+    lazy var ascendingSwitch: UISwitch = {
+        
+        let sh = UISwitch()
+        return sh
+    }()
+    lazy var videoSwitchDesLab: UILabel = {
+        let des = UILabel()
+        des.text = "是否支持视频单选（不支持img&V模式）"
+        des.textColor = .black
+        return des
+    }()
+    lazy var videoSwitch: UISwitch = {
+        let sh = UISwitch()
+        return sh
+    }()
+    lazy var pickturSwitchDesLab: UILabel = {
+        let des = UILabel()
+        des.text = "是否支持图片单选（不支持img&V和imageOrV模式"
+        des.adjustsFontSizeToFitWidth = true
+        des.textColor = .black
+        return des
+    }()
+    lazy var pickturSwitch: UISwitch = {
+        let sh = UISwitch()
+        return sh
+    }()
+   lazy var maxCountTextfield: UITextField = {
+        let maxImge = UITextField()
+        maxImge.text("9")
+        maxImge.placeholder("可选择图片的最大个数")
+        maxImge.keyboardType(.numberPad)
+        return maxImge
+    }()
+    lazy var collectionView: UICollectionView = {
+        
+       let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.itemSize = CGSize(width: 111, height: 111)
+        let collection = UICollectionView(frame: CGRect.init(x: 10, y: 40, width: KScreenWidth-20, height: 150), collectionViewLayout: layout)
+        collection.backgroundColor = .white
+        collection.jx.register(cellClass: MasterCell.self)
+        return collection
+    }()
+    lazy var accumulationSwitchDesLab: UILabel = {
+        let des = UILabel()
+        des.text = "是否支持多次累加选择"
+        des.textColor = .black
+        return des
+    }()
+   lazy var accumulationSwitch: UISwitch = {
+       let sh = UISwitch()
+       sh.jx.setHandle { isOn in
+           
+       }
+       return sh
+    }()
+   lazy var macCountOfVideoTextfield: UITextField = {
+        let maxVideo = UITextField()
+        maxVideo.text("1")
+        maxVideo.placeholder("可选择视频的最大个数")
+        maxVideo.keyboardType(.numberPad)
+        return maxVideo
+    }()
+    lazy var selectorBtn :UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("选择照片", for: .normal)
+        button.textColor(UIColor.blue)
+        button.addTarget(self, action: #selector(selectorBtnClick), for: .touchUpInside)
+        return button
+    }()
     var selectedModel = [HEPhotoAsset]()
     var visibleImages = [UIImage](){
         didSet{
@@ -57,7 +139,107 @@ class CusomDemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(84)
+            make.left.equalTo(10)
+            make.width.equalTo(KScreenWidth-20)
+            make.height.equalTo(160)
+        }
+        self.view.addSubview(pickerTypeSegment)
         
+        pickerTypeSegment.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom).offset(10)
+            make.left.equalTo(0)
+            make.width.equalTo(KScreenWidth)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(maxCountTextfield)
+        maxCountTextfield.snp.makeConstraints { make in
+            make.top.equalTo(pickerTypeSegment.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(KScreenWidth-30)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(macCountOfVideoTextfield)
+        macCountOfVideoTextfield.snp.makeConstraints { make in
+            make.top.equalTo(maxCountTextfield.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(KScreenWidth-30)
+            make.height.equalTo(30)
+        }
+        
+        self.view.addSubview(ascendingSwitch)
+        ascendingSwitch.snp.makeConstraints { make in
+            make.top.equalTo(macCountOfVideoTextfield.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(45)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(ascendingSwitchDesLab)
+        ascendingSwitchDesLab.snp.makeConstraints { make in
+            make.top.equalTo(ascendingSwitch)
+            make.left.equalTo(ascendingSwitch.snp.right).offset(10)
+            make.width.equalTo(KScreenWidth-60)
+            make.height.equalTo(30)
+        }
+        
+        self.view.addSubview(accumulationSwitch)
+        accumulationSwitch.snp.makeConstraints { make in
+            make.top.equalTo(ascendingSwitch.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(45)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(accumulationSwitchDesLab)
+        accumulationSwitchDesLab.snp.makeConstraints { make in
+            make.top.equalTo(accumulationSwitch)
+            make.left.equalTo(accumulationSwitch.snp.right).offset(10)
+            make.width.equalTo(KScreenWidth-60)
+            make.height.equalTo(30)
+        }
+        
+        self.view.addSubview(videoSwitch)
+        videoSwitch.snp.makeConstraints { make in
+            make.top.equalTo(accumulationSwitch.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(45)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(videoSwitchDesLab)
+        videoSwitchDesLab.snp.makeConstraints { make in
+            make.top.equalTo(videoSwitch)
+            make.left.equalTo(videoSwitch.snp.right).offset(10)
+            make.width.equalTo(KScreenWidth-60)
+            make.height.equalTo(30)
+        }
+        
+        self.view.addSubview(pickturSwitch)
+        pickturSwitch.snp.makeConstraints { make in
+            make.top.equalTo(videoSwitch.snp.bottom).offset(10)
+            make.left.equalTo(15)
+            make.width.equalTo(45)
+            make.height.equalTo(30)
+        }
+        self.view.addSubview(pickturSwitchDesLab)
+        pickturSwitchDesLab.snp.makeConstraints { make in
+            make.top.equalTo(pickturSwitch)
+            make.left.equalTo(pickturSwitch.snp.right).offset(10)
+            make.width.equalTo(KScreenWidth-60)
+            make.height.equalTo(30)
+        }
+        
+        self.view.addSubview(selectorBtn)
+        selectorBtn.snp.makeConstraints { make in
+            make.top.equalTo(pickturSwitch.snp.bottom).offset(50)
+            make.left.equalTo(10)
+            make.width.equalTo(KScreenWidth-20)
+            make.height.equalTo(30)
+        }
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        self.view.backgroundColor = .white
  
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,22 +253,25 @@ class CusomDemoViewController: UIViewController {
     @IBAction func videoSwitchClick(_ sender: UISwitch) {
         cleanSelectedBtnClick()
     }
-    @IBAction func segumentClick(_ sender: UISegmentedControl) {
+    
+    @objc func segumentClick(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
-        case 2 :
-           singleImageView.isHidden = true
-           singleVideoView.isHidden = true
+        case 2 : //break
+           pickturSwitch.isHidden = true
+           videoSwitch.isHidden = true
         case 3 :
-           singleImageView.isHidden = true
-           singleVideoView.isHidden = false
+//            break
+            pickturSwitch.isHidden = true
+            videoSwitch.isHidden = false
         default:
-            singleImageView.isHidden = false
-            singleVideoView.isHidden = false
+//            break
+            pickturSwitch.isHidden = false
+            videoSwitch.isHidden = false
         }
         cleanSelectedBtnClick()
     }
     
-    @IBAction func selectorBtnClick(_ sender: Any) {
+    @objc func selectorBtnClick(_ sender: Any) {
         self.view.endEditing(true)
         guard let str = maxCountTextfield.text,let count = Int(str) else {
             return
@@ -189,7 +374,7 @@ extension CusomDemoViewController : UICollectionViewDelegate,UICollectionViewDat
                 
                 browser.transitioningDelegate = self.animator
                 self.present(browser, animated: true, completion: nil)
-            }
+             }
         }
     }
     

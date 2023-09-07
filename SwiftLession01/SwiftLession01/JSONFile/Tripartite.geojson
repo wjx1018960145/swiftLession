@@ -11,7 +11,59 @@
     },
     {
         "title":"图片选择器",
-        "vc":"ThemListViewController"
+        "vc":"CusomDemoViewController"
+    },
+    {
+        "title":"开屏广告",
+        "vc":"AdViewViewController"
+    },
+    {
+        "title":"面包toast",
+        "vc":"ToastViewController"
+    },
+    {
+        "title":"自定义日志打印",
+        "vc":"LogViewController"
+    },
+    {
+        "title":"扫一扫",
+        "vc":"ScanViewController"
+    },
+    {
+        "title":"轮播banner和卡片选择",
+        "vc":"BannerViewController"
+    },
+    {
+        "title":"占位视图",
+        "vc":"ZhanWeiViewController"
+    },
+    {
+        "title":"WebToNactive",
+        "vc":"WkWebViewToNativeViewController"
+    },
+    {
+        "title":"Http网络请求基于Alamofire的二次封装",
+        "vc":"HTTPRequestViewController"
+    },
+    {
+        "title":"通知样式提示banner",
+        "vc":"NotificationViewController"
+    },
+    {
+        "title":"视图加载动画",
+        "vc":"ViewAnimatorViewController"
+    },
+    {
+        "title":"H5离线包",
+        "vc":"OfflinePackageViewController"
+    },
+    {
+        "title":"路由",
+        "vc":"RouterViewController"
+    },
+    {
+        "title":"APNS远程推送(查看Appledelegate)",
+        "vc":""
     }
    
 ]

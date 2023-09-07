@@ -1,0 +1,7 @@
+{"Pages/Paly/play":{"flags":"1","needLogin":"0","title":"播放","class":"PlayViewController"},
+    "Pages/WebView/web":{"flags":"1","needLogin":"0","title":"网页","class":"WJXWebViewController"},
+    "Pages/Login$Regs/login":{"flags":"1","needLogin":"0","title":"登录","class":"LoginViewController"},
+    "Pages/Login$Regs/register":{"flags":"1","needLogin":"0","title":"注册","class":"RegisterViewController"},
+    "Pages/Pay/pay":{"flags":"1","needLogin":"0","title":"支持","class":"PayViewController"}
+    
+}

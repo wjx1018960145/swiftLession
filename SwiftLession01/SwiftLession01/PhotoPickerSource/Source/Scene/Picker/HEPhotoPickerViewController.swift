@@ -28,9 +28,9 @@
 import UIKit
 import Photos
 //屏宽
-let kScreenWidth = UIScreen.main.bounds.size.width
-//屏高
-let kScreenHeight = UIScreen.main.bounds.size.height
+//let kScreenWidth = UIScreen.main.bounds.size.width
+////屏高
+//let kScreenHeight = UIScreen.main.bounds.size.height
 
 @objc public protocol HEPhotoPickerViewControllerDelegate
 {

@@ -5,22 +5,36 @@
 //  Created by wjx on 2021/12/13.
 //
 
+import JLRoutes
 import UIKit
+import SwiftEventBus
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    static var ON_START_RECORD:String = "ON_START_RECORD"
     var window : UIWindow?
     let tabbarVC = BubbleTabBarController()
+     let  utils = Utils()
+    private var navigator: NavigatorProtocol?
+    
     var nav : UINavigationController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        print(NSHomeDirectory())
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(doSomethingMethod),
             name: NSNotification.Name(rawValue: ThemeUpdateNotification),
             object: nil
         )
+        
+        SwiftEventBus.onMainThread(self, name: AppDelegate.ON_START_RECORD) { result in
+            print("下载成功 更新")
+            PackageManager.getInstance.update(packageIndexStr: result?.object as! String);
+            
+        }
+        PackageManager.getInstance.inits()
+        getPackageIndex(url: Constants.BASE_PACKAGE_INDEX);
+        
         // default: Red.json
         Themes.restoreLastTheme()
 //        ThemeManager.setTheme(jsonName: "Red", path: .mainBundle)
@@ -29,9 +43,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // status bar
         
         setHome()
+        //添加推送消息
+        Pusher.registerRemoteService()
+        //初始化路由
+        //查询远程路由 下载最新
+//        downloadRouters()
+        WJXVCRouterConfig.configMapInfo()
+        
+        HTSDKEngine.initSDKEnvironment()
+        
+        let presetApplistPath = Bundle.jx.getBundlePathResource(bundName: "HTCustomPresetApps", resourceName: "h5_json.json", bundleType: .currentBundle)
+//        utils.loadFileContent(path: "HTCustomPresetApps.bundle/h5_json.json")
+        let appPackagePath = Bundle.jx.getBundlePathResource(bundName: "MPCustomPresetApps", resourceName: "")
+//        utils.loadFileContent(path:"MPCustomPresetApps.bundle")
+        let pluginsJsapisPath = Bundle.jx.getBundlePathResource(bundName: "MPCustomPlugins", resourceName: "Poseidon-UserDefine-Extra-Config")
+//        utils.loadFileContent(path:"Poseidon-UserDefine-Extra-Config.plist")
+        
+        HTSDKEngine.initNebulaWithCustomPresetApplistPath(customPresetApplistPath: presetApplistPath, customPresetAppPackagePath: appPackagePath, customPluginsJsapisPath: pluginsJsapisPath)
+        
+        
+        
 //        self.window.rootViewController = vc
         return true
     }
+    func getPackageIndex(url:String){
+        let thread = Thread(target: self, selector: #selector(threadExecute), object: url)
+        thread.start()
+    }
+    @objc func threadExecute(url:String) {
+        
+        
+        Mesh.downLoadWithConfig { config in
+            config.URLString = url
+            config.requestMethod = .get
+            config.destination = {(temporaryURL, response) in
+                var documentsPath = FileUtils.getPackageRootPath()+"/"
+
+                let pathComponent = response.suggestedFilename
+                documentsPath.append(pathComponent!)
+                
+                return (URL(fileURLWithPath: documentsPath),[.removePreviousFile, .createIntermediateDirectories])
+            }
+//            let path = FileUtils.getPackageRootPath()
+//
+//            config.fileURL = URL(fileURLWithPath:path)
+        } progress: { progress in
+            print(progress)
+        } success: { config in
+            print(config)
+            SwiftEventBus.post(AppDelegate.ON_START_RECORD, sender: config.fileUrl)
+        } failure: { config in
+            
+        }
+            
+//            Mesh.requestWithConfig { config in
+//                config.URLString = url
+//                config.requestMethod = .get
+//            } success: { config in
+//                guard let data = config.response?.data else{
+//                    return
+//                }
+//                let dic = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+//                print("\(String(describing: dic?["holiday"]))")
+//
+//            } failure: { config in
+//                print("error getHoliday")
+//            }
+            
+            
+           
+        }
+    
      func setHome(){
          
          window = UIWindow.init()
@@ -144,6 +226,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         Themes.saveLastTheme()
+    }
+    
+    
+    
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+    ) -> Bool {
+        // Try presenting the URL first
+        if self.navigator?.present(url, wrap: UINavigationController.self) != nil {
+            print("[Navigator] present: \(url)")
+            return true
+        }
+        
+        // Try opening the URL
+        if self.navigator?.open(url) == true {
+            print("[Navigator] open: \(url)")
+            return true
+        }
+        
+        return false
     }
 
 }

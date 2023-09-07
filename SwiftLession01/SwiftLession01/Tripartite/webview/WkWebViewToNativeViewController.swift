@@ -1,0 +1,198 @@
+//
+//  WkWebViewToNativeViewController.swift
+//  SwiftLession01
+//
+//  Created by wjx on 2022/6/17.
+//
+
+import UIKit
+import WebKit
+
+
+class WkWebViewToNativeViewController: UIViewController , WKNavigationDelegate, WKScriptMessageHandler{
+
+    
+    var mWebView = FlexWebView()
+    var component = FlexComponent()
+    
+    enum TestError: Error {
+        case test
+    }
+    let testRevetive = FlexClosure.interface { arguments in
+        let data = arguments[0].asDictionary()!
+        let dicData: [String:FlexData] = data["d2"]!.reified()!
+        print("\(data["d1"]!.asInt()!) \(String(describing: dicData["data"]!.toString()))")
+        var returnValue: [Any?] = []
+        returnValue.append(10)
+        returnValue.append(24123.54235234)
+        returnValue.append([])
+        returnValue.append(false)
+        returnValue.append("test value")
+        return returnValue
+    }
+    
+    let testAction = FlexClosure.action { action, arguments in
+        action.onFinished = {
+            print("action finished!")
+        }
+        
+        // code works in background...
+        var returnValue: [String:Any] = [:]
+        var dictionaryValue: [String:Any] = [:]
+        dictionaryValue["subkey1"] = ["dictionaryValue",0.12]
+        dictionaryValue["subkey2"] = 1000.100
+        returnValue["key1"] = "value1\ntest"
+        returnValue["key2"] = dictionaryValue
+        returnValue["key3"] = ["arrayValue1",nil]
+        returnValue["key4"] = true
+        // Promise return to Web
+        // PromiseReturn can be called at any time.
+        action.promiseReturn(returnValue)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        component.addEventListener{(type, funcName, url, msg)in
+            var typeTxt = "";
+            if type == FlexEvent.SUCCESS {
+                typeTxt = "SUCCESS"
+            } else if type == FlexEvent.TIMEOUT {
+                typeTxt = "TIMEOUT"
+            } else if type == FlexEvent.EXCEPTION {
+                typeTxt = "EXCEPTION"
+            } else if type == FlexEvent.INIT {
+                typeTxt = "INIT"
+            }
+            print("\nEVENT --------- \(typeTxt)")
+            print("FUNCTUIN ------ $flex.\(funcName)")
+//            print("URL ----------- \(url)")
+            print("MSG ----------- \(msg ?? "nil")\n")
+            
+        }
+        //注册js调用原生接口
+        component.setInterface("test1") { arguments in
+            
+            return arguments[0].asInt()! + 1
+        }
+        component.setInterface("test2") { (arguments) in
+            
+            // call $flex.web function 调用js web 方法
+            // same as $flex.web.help("Help me Flex!") in js
+            self.component.evalFlexFunc("help", sendData: "") { (value) in
+                let arr = value.asArray()!
+                let data1: String = arr[0].reified()!
+                let data2: Bool = arr[1].reified()!
+                print("Web Func Retrun ---------------")
+                print("\(data1) \(data2)")
+                print("-------------------------------")
+            }
+            
+        }
+       
+        
+        // test JS Reject
+        component.setInterface("testReject1") { arguemnts in
+            throw TestError.test
+        }
+        component.setAction("testReject2")
+        { (action, arguemnts) in
+            action.reject()
+        }
+        
+        // add FlexAction 添加一个事件
+        component.setAction("testAction", testAction)
+        
+        component.setAction("modelTest1") { (action, model: TestModel1?) in
+            
+            print("Model Test 1 ------------")
+            print("\(String(describing: model?.string)) \(String(describing: model?.integer))")
+            print("-------------------------")
+            action.promiseReturn()
+        }
+        component.setInterface("modelTest2")
+        { (model: TestModel2?) -> Void in
+            print("Model Test 2 ------------")
+            print("\(String(describing: model?.array)) \(String(describing: model?.dic))")
+            print("\(String(describing: model?.model.bool))")
+            print("-------------------------")
+        }
+        
+        component.setInterface("modelTest3")
+        { arguments in
+            return TestModel2(array: ["test1"], dic: ["test2": "test3"], model: TestModel3(bool: true))
+        }
+        
+        // setBaseUrl
+        component.setBaseUrl("file://")
+        component.addAllowUrl(".*.baidu.com", canFlexLoad: false)
+        component.addAllowUrl(".*.baidu.com", canFlexLoad: true)
+        component.setInterfaceTimeout(0)
+//        component.setFlexOnloadWait(0)
+        component.setAllowsUrlAccessInFile(true)
+        component.setShowWebViewConsole(true)
+        
+        mWebView = FlexWebView(frame: self.view.frame, component: component)
+        
+        mWebView.translatesAutoresizingMaskIntoConstraints = false
+        mWebView.scrollView.bounces = false
+        mWebView.scrollView.isScrollEnabled = true
+        mWebView.enableScroll = true
+        
+        view.addSubview(mWebView)
+        
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor.systemBackground
+            let safeArea = self.view.safeAreaLayoutGuide
+            mWebView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+            mWebView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+            mWebView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+            mWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        }
+        else if #available(iOS 11.0, *) {
+            view.backgroundColor = UIColor.white
+            let safeArea = self.view.safeAreaLayoutGuide
+            mWebView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+            mWebView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+            mWebView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+            mWebView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
+        } else {
+            view.backgroundColor = UIColor.white
+            mWebView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            mWebView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+            mWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            mWebView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+        }
+        mWebView.load(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "html")!)))
+        
+        // add user-custom contentController
+        component.configuration.userContentController.add(self, name: "userCC")
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // set user-custom navigationDelegate
+        mWebView.navigationDelegate = self
+    }
+
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        print("--------- user navigationDelegate")
+    }
+    @available(iOS 13.0, *)
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
+        print("--------- user decidePolicyFor")
+        decisionHandler(.allow, preferences)
+    }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("-------- userContentController")
+    }
+}

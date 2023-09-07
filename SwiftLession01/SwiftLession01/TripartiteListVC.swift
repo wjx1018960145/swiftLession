@@ -62,14 +62,28 @@ class TripartiteListVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             tabBarController.viewControllers = [eventsVC, searchVC, activityVC, settingsVC]
             tabBarController.tabBar.tintColor = #colorLiteral(red: 0.1579992771, green: 0.1818160117, blue: 0.5072338581, alpha: 1)
             self.navigationController?.pushViewController(tabBarController, animated: true)
-        }else{
+        }
+//        else if ((dic["vc"]! as! String).contains("_xib")){
+//            let cellName = dic["vc"] as! String
+//            
+//            _ = cellName.range(of: "_xib")
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "photo")
+//            
+////            guard let vc = UIViewController.init(nibName: "CusomDemoViewController", bundle: nil)
+//            
+//            vc.title = dic["title"] as? String
+//            navigationController?.pushViewController(vc, animated: true)
+//            
+//        }
+        else{
             let cellName = dic["vc"] as! String
             let vcName = cellName
             guard let vc = vcName.jx.toViewController() else {
                print("没有该名字的控制器：\(vcName)")
                 return
             }
-            vc.title = dic["title"] as! String
+            vc.title = dic["title"] as? String
             navigationController?.pushViewController(vc, animated: true)
         }
         

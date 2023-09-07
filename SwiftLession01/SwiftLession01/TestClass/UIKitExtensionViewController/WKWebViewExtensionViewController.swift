@@ -12,7 +12,7 @@ class WKWebViewExtensionViewController: TestBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headDataArray = ["一、基本的扩展"]
-        dataArray = [["WKWebViewConfiguration默认配置", "js注入", "js交互", "调整字体的比例", "加载网页", "获取WKWebView视图"]]
+        dataArray = [["WKWebViewConfiguration默认配置", "js注入", "js交互", "调整字体的比例", "加载网页", "获取WKWebView视图","测试定位"]]
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +30,19 @@ class WKWebViewExtensionViewController: TestBaseViewController {
 }
 // MARK: - 一、基本的扩展
 extension WKWebViewExtensionViewController {
+    
+    @objc func test17(){
+        //添加WKWebView
+        // 方法一 加载路径
+        let htmlPath = Bundle.main.path(forResource: "index", ofType: "html")
+        let wkWebView = WKWebView(frame: CGRect(x:0, y: 0,  width: jx_kScreenW, height: jx_kScreenH - jx_kNavFrameH))
+        let url = URL.init(fileURLWithPath: htmlPath!) // 把字符串 转成 URL 类型
+        let request = URLRequest(url: url)
+        wkWebView.load(request)
+        wkWebView.navigationDelegate = self
+        self.view.addSubview(wkWebView)
+    }
+    
     
     // MARK: 1.6、获取WKWebView视图
     @objc func test16() {

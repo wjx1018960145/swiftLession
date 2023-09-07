@@ -1,9 +1,52 @@
 PODS:
   - Alamofire (5.4.4)
+  - Cache (6.0.0)
+  - CryptoSwift (1.4.2)
   - FDFullscreenPopGesture (1.1)
+  - HGPlaceholders (0.5.0)
+  - JLRoutes (2.1)
+  - JXBanner (0.3.6):
+    - JXBanner/Banner (= 0.3.6)
+    - JXBanner/PageControl (= 0.3.6)
+  - JXBanner/Banner (0.3.6):
+    - JXBanner/Banner/API (= 0.3.6)
+    - JXBanner/Banner/Banner (= 0.3.6)
+    - JXBanner/Banner/Cell (= 0.3.6)
+    - JXBanner/Banner/Common (= 0.3.6)
+    - JXBanner/Banner/Transform (= 0.3.6)
+  - JXBanner/Banner/API (0.3.6):
+    - JXBanner/Banner/Cell
+    - JXBanner/PageControl
+  - JXBanner/Banner/Banner (0.3.6):
+    - JXBanner/Banner/API
+    - JXBanner/Banner/Common
+    - JXBanner/Banner/Transform
+  - JXBanner/Banner/Cell (0.3.6)
+  - JXBanner/Banner/Common (0.3.6)
+  - JXBanner/Banner/Transform (0.3.6):
+    - JXBanner/Banner/API
+  - JXBanner/PageControl (0.3.6):
+    - JXPageControl
+  - JXPageControl (0.1.5):
+    - JXPageControl/Common (= 0.1.5)
+    - JXPageControl/Jump (= 0.1.5)
+    - JXPageControl/Transform (= 0.1.5)
+  - JXPageControl/Common (0.1.5)
+  - JXPageControl/Jump (0.1.5):
+    - JXPageControl/Common
+  - JXPageControl/Transform (0.1.5):
+    - JXPageControl/Common
+  - Kingfisher (6.3.1)
+  - KKJSBridge/AjaxProtocolHook (1.3.9):
+    - KKJSBridge/Core
+  - KKJSBridge/Core (1.3.9)
   - MarkdownView (1.8.3)
+  - MarqueeLabel (4.0.5)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.7.5)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -19,6 +62,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.3):
     - PINCache (~> 3.0.3)
     - PINRemoteImage/Core
+  - Reveal-SDK (33)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -27,6 +71,7 @@ PODS:
   - RxSwift (6.5.0)
   - SnapKit (5.0.1)
   - SSZipArchive (2.4.2)
+  - SwiftEventBus (3.0.1)
   - Texture (3.1.0):
     - Texture/AssetsLibrary (= 3.1.0)
     - Texture/Core (= 3.1.0)
@@ -47,20 +92,48 @@ PODS:
     - Texture/Core
   - Texture/Video (3.1.0):
     - Texture/Core
+  - ViewAnimator (3.1.0)
+  - WKWebViewJavascriptBridge (1.2.2)
 
 DEPENDENCIES:
   - Alamofire
+  - Cache
+  - CryptoSwift
   - FDFullscreenPopGesture
+  - HGPlaceholders
+  - JLRoutes
+  - JXBanner
+  - Kingfisher (~> 6.0)
+  - KKJSBridge/AjaxProtocolHook
   - MarkdownView (~> 1.8.3)
   - MBProgressHUD
   - MJRefresh
+  - NotificationBannerSwift
+  - Reveal-SDK
   - RxCocoa
   - RxSwift
   - SnapKit
   - SSZipArchive
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`, tag `3.0.1`)
   - Texture
+  - ViewAnimator
+  - WKWebViewJavascriptBridge (~> 1.2.0)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Cache
+    - CryptoSwift
+    - HGPlaceholders
+    - JLRoutes
+    - JXBanner
+    - JXPageControl
+    - Kingfisher
+    - KKJSBridge
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - Reveal-SDK
+    - ViewAnimator
+    - WKWebViewJavascriptBridge
   trunk:
     - Alamofire
     - FDFullscreenPopGesture
@@ -77,22 +150,46 @@ SPEC REPOS:
     - SSZipArchive
     - Texture
 
+EXTERNAL SOURCES:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 3.0.1
+
+CHECKOUT OPTIONS:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 3.0.1
+
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  HGPlaceholders: cbf8caed8360fc2ab5e8a4610cce61f76fbd2c37
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
+  JXBanner: 348dbef856e786494cbf30fb45d6b84826f2d3c5
+  JXPageControl: e9487b39e2e58fc17790833214f3b8e935bef98b
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  KKJSBridge: 1eafd0638710a0781f0ab4e3051362d1b6ffd809
   MarkdownView: 44a260beec01538e6cdbbce9c2f631b1f3634907
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  Reveal-SDK: effba1c940b8337195563c425a6b5862ec875caa
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SSZipArchive: e7b4f3d9e780c2acc1764cd88fbf2de28f26e5b2
+  SwiftEventBus: 87ccaeceff91b748775e37751ae3a81ec815b3d5
   Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
+  ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
+  WKWebViewJavascriptBridge: d7324badf8996486c71648f448617b09bf927b4b
 
-PODFILE CHECKSUM: 7e55a20ec00dc27dc2b17978118a7292e8ce484b
+PODFILE CHECKSUM: e07f42eb5b83c977d47456c41f2140e2d81eee74
 
 COCOAPODS: 1.11.2

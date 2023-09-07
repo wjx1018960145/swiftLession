@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location获取城市</title>
+</head>
+<body>
+	<div id="location"></div>
+
+	<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+	<script type="text/javascript">
+		;(function() {
+		/**
+		* 动态加载js文件
+		* @param  {string}   url      js文件的url地址
+		* @param  {Function} callback 加载完成后的回调函数
+		*/
+		var getScript = function(url, callback) {
+			var head = document.getElementsByTagName('head')[0],
+		 	js = document.createElement('script');
+
+			js.setAttribute('type', 'text/javascript'); 
+			js.setAttribute('src', url); 
+
+			head.appendChild(js);
+
+			//执行回调
+			var callbackFn = function(){
+		    	if(typeof callback === 'function'){
+		        	callback();
+		     	}
+		 	};
+
+			if (document.all) { //IE
+		 		js.onreadystatechange = function() {
+		     		if (js.readyState == 'loaded' || js.readyState == 'complete') {
+		        		callbackFn();
+		     		}
+		 		}
+			} else {
+		 		js.onload = function() {
+		     		callbackFn();
+		 		}
+			}
+		}
+
+		//如果使用的是zepto，就添加扩展函数
+		if(Zepto){
+			$.getScript = getScript;
+		}
+
+		})();
+
+		// 是否支持 HTML5 navigator.geolocation
+	    if (navigator.geolocation)
+        {
+	        navigator.geolocation.getCurrentPosition(showPosition, showErr);
+	    }else {
+	    	$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js', function(_result) {
+	            if (remote_ip_info.ret == '1') {
+	                alert(remote_ip_info.city);
+	            } else {
+	                alert('没有找到匹配的IP地址信息！');
+	            }
+	        });
+
+	    }
+
+	    function showPosition(position){
+	    	var _ak = 'YCO6UmCOICKL3zGw3nTNIkyzAMqGKtPh';
+	    	var _data = 'ak='+ _ak +'&callback=?&location='+position.coords.latitude+','+position.coords.longitude+'&output=json&pois=1';
+	    	$.ajax({
+				type: "GET",
+				url: "http://api.map.baidu.com/geocoder/v2/",
+				data: _data,
+				dataType : 'json',
+				success: function(data){
+					var city = data.result.addressComponent.city;
+	        		if (city[city.length - 1] === "市") {
+	        			city = city.substring(0,city.length - 1);
+	        		}
+	                // $("#location").html(city);
+	                alert(city);
+				}
+			});
+	    }
+	    function show(msg){
+	        alert(msg)
+	    }
+	    function showErr(error){
+	        var result;
+	        switch(error.code) 
+	        {
+	        case error.PERMISSION_DENIED:
+	          result="User denied the request for Geolocation."
+	          break;
+	        case error.POSITION_UNAVAILABLE:
+	          result="Location information is unavailable."
+	          break;
+	        case error.TIMEOUT:
+	          result="The request to get user location timed out."
+	          break;
+	        case error.UNKNOWN_ERROR:
+	          result="An unknown error occurred."
+	          break;
+	        }
+	        alert(result);
+	    }
+		</script>
+</body>
+</html>

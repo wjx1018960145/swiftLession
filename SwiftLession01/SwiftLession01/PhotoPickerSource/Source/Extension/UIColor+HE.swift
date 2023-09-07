@@ -26,11 +26,11 @@
 import UIKit
 extension UIColor {
     class var background: UIColor {
-        return UIColor(r: 242, g: 242, b: 242)
+        return UIColor(r: 242, g: 242, b: 242, alpha: 1)// UIColor(r: 242, g: 242, b: 242) //( r: 242, g: 242, b: 242)
     }
     
    public class var themeYellow: UIColor {
-        return UIColor(r: 219, g: 147, b: 79)
+       return UIColor(r: 219, g: 147, b: 79, alpha: 1)// UIColor.init(r: 219, g: 147, b: 79)
     }
 }
 extension UIColor {
