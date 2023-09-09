@@ -206,6 +206,8 @@ var dic = ["jack":[1,2,3],"rouse":[3,4,5]]
 
 var s = dic["jack"]?[0]
 
+//协议
+
 
 
 

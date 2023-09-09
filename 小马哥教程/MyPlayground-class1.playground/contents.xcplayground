@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'/>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='class02-数据类型'/>
+        <page name='page01-注释'/>
+        <page name='page03-流程控制'/>
+        <page name='page04-函数'/>
+        <page name='page05-枚举'/>
+        <page name='page06-可选项'/>
+        <page name='page07-结构体'/>
+        <page name='page08-类'/>
+        <page name='page10-属性'/>
+        <page name='page11-方法'/>
+        <page name='page12-继承'/>
+        <page name='page12-下标'/>
+        <page name='page13-多态'/>
+        <page name='pahe09-闭包'/>
+        <page name='page14-协议'/>
+    </pages>
+</playground>
