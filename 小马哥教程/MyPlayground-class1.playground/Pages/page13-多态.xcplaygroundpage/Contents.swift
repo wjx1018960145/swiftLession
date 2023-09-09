@@ -170,6 +170,43 @@ class Persion {
 
 //: * 可选链
 
+class Car {var price = 0}
+class Dog {var weight = 0}
+class Per{
+    
+    var name:String = ""
+    var dog: Dog = Dog()
+    var car :Car? = Car()
+    func age()->Int{return 19}
+    func eat(){print("person ear")}
+    
+    subscript(index:Int)->Int {
+        index
+    }
+   
+}
+
+var ppp :Per? = Per()
+
+
+
+var age =  ppp?.age()//int?
+var age1 =  ppp!.age()//int
+var str =  ppp?.name//string
+var index = ppp?[7]//int?
+
+//如果可选项为nil 调用方法，下标，属性失败，结果为nil
+//如果可选项不为nil 调用方法，下标，属性成功，结果会被包装成可选项
+//如果结果本来就是可选项，不会进行再次包装
+
+//多个？可以连接在一起
+//如果链中任何一个节点是nil 那么整个链就会调用失败
+
+var dic = ["jack":[1,2,3],"rouse":[3,4,5]]
+
+var s = dic["jack"]?[0]
+
+
 
 
 
