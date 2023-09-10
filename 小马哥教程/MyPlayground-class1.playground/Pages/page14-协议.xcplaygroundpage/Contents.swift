@@ -220,4 +220,140 @@ var c8 = c7(name:"jack")
 print(c8)
 
 
+// Any AnyObject
+//swift提供了两种特殊类型 Any AnyObject
+//any :可以代表任意类型（枚举，结构体，类，也包括函数类型）
+
+//anyObject ：可以代表任意类类型（在协议后面写上：AnyObject代表只有类能遵守这个协议）
+protocol Runable :AnyObject{
+    
+}
+
+class c10:Runable{
+    
+}
+
+//struct c11:Runable{} 错误写法
+
+var str:Any = 10
+str = "jack"
+str = c10()
+
+
+//创建一个能存放任意类型的数组
+
+//var data= Array<Any()
+var data = [Any]()
+
+data.append(1)
+data.append(3.14)
+data.append(c10())
+data.append("jack")
+data.append({10})
+data.append({
+    
+    ()->Int in
+    return 10
+    
+})
+print(data)
+//data
+
+//is as? as! as
+// is 用来判断是否为某种类型，as 用来做强制类型转换
+
+protocol p10{
+    func run()
+}
+class c11 {
+}
+class c12 : c11 ,p10{
+    func run() {
+        
+    }
+    func student(){
+        print("STudent")
+    }
+}
+var stu:Any = 10
+
+print(stu is Int)
+stu = "jack"
+print(stu is String)
+stu = c12()
+print(stu is c11)
+print(stu is c12)
+print(stu is p10)
+
+
+(stu as! c12).student()
+(stu as? c12)?.student()
+
+var data1 = [Any]()
+data1.append(Int("123") as Any)
+print(data1.count)
+
+
+// X.self X.type AnyClass
+// X.self 是一个元类型（metadata）的指针，metadata存放这类型相关的信息
+// X.self 属性X.Type
+class x{}
+var xx :x = x()
+
+print(type(of: xx))
+
+var xType:x.Type = x.self
+
+var xxx:AnyObject = x()
+var px :x.Type = x.self
+var px2 :AnyObject.Type = x.self
+
+// 元类型应用
+
+class Animal{required init(){}}
+
+class cat:Animal{}
+class dog:Animal{}
+class pig:Animal{}
+func create(_ clss:[Animal.Type])->[Animal]{
+    var arr = [Animal]()
+    for cls in clss {
+        arr.append(cls.init())
+    }
+    return arr
+}
+print(create([cat.self,dog.self,pig.self]))
+
+
+
+
+class_getInstanceSize(x.self)
+
+
+// Self 一般用作返回值类型，限定返回值跟方法调用者必须是同一类型（也可以作为参数类型）
+
+protocol RunAble{
+    func test()->Self
+}
+
+class c14 :RunAble {
+
+    required init(){}
+    func test() -> Self {
+        type(of: self).init()
+    }
+}
+
+class c140 :c14{
+    
+}
+var c1401 = c14()
+c1401.test()
+
+var c1402 = c140()
+c1402.test()
+
+// 如果Self用在类中，要求返回时调用的初始化器是required的
+
+
 //: [下一页](@next)
