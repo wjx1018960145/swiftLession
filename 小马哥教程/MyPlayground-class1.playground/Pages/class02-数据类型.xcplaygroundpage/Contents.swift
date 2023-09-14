@@ -76,12 +76,153 @@ let (justTheStatusCode,_) = http
 let http2 = (status:200,des:"ok")
 
 
+//关联类型 给协议中用到的类型定义一个占位名称
+//协议有多个关联类型
+protocol Stackable{
+    associatedtype Element//关联类型
+//    associatedtype Element2//关联类型
+    mutating func push(_ element:Element)
+    mutating func pop()->Element
+    func top()->Element
+    func size()->Int
+}
+
+
+class StringStack :Stackable {
+   
+    
+    
+    typealias Element = String
+    
+//    typealias Element2 = <#type#>
+    
+    var elements = [String]()
+    func push(_ element: String) {
+        elements.append(element)
+    }
+    func pop() -> String {
+        elements.removeLast()
+    }
+    func top() -> String {
+        elements.last!
+    }
+    func size() -> Int {
+        elements.count
+    }
+}
+
+var ss = StringStack()
+ss.push("jack")
+ss.push("rose")
+
+
+class ClassStack<E> :Stackable {
+    
+    var elements = [E]()
+    func push(_ element: E) {
+        elements.append(element)
+    }
+    func pop() -> E {
+        elements.removeLast()
+    }
+    func top() -> E {
+        elements.last!
+    }
+    func size() -> Int {
+        elements.count
+    }
+}
+
+
+// 类型约束
+
+protocol Stackables{
+    associatedtype Element :Equatable
+}
+
+class CCStack<E:Equatable>:Stackables {
+    typealias Element = E
+    
+
+    
+    
+}
+
+func equal<S1:Stackables,S2:Stackables>(_ s1:S1,_ s2:S2)->Bool
+    where S1.Element == S2.Element, S1.Element:Hashable {
+    return false
+    
+}
+
+var s1 = CCStack<Int>()
+var s2 = CCStack<Int>()
+var s3 = CCStack<String>()
 
 
 
+equal(s1, s2)
+
+// 协议类型注意点
+
+//protocol Runable{
+//
+//}
+//class Person:Runable {}
+//class Car:Runable{}
+//
+//
+//func get(_ type:Int)->Runable {
+//    if type == 0{
+//        return Person()
+//    }
+//    return Car()
+//}
+//
+//
+//var r1 = get(0)
+//var r2 = get(2)
+
+// 如果协议中有关联类型 associatedtype
+
+protocol Runable{
+    associatedtype Speed
+    var speed:Speed{get}
+}
+class Person:Runable {
+    var speed: Double {0.0}
+}
+class Car:Runable{
+    var speed: Int{0}
+}
 
 
+func get<T:Runable>(_ type:Int)->T {
+    if type == 0{
+        return Person() as! T
+    }
+    return Car() as!T
+}
 
+
+var r1:Person = get(0)
+var r2:Car = get(2)
+
+
+// 不透明类型  使用some关键字声明一个不透明类型 只能返回一种类型
+// some除了用在返回值类型上，一般还可以用在属性上
+func get1(_ type:Int) -> some Runable{
+    Car()
+}
+
+
+protocol A{associatedtype eat}
+
+class Dog:A {typealias eat = Double}
+class Cat{
+    var sleep:some A{
+    return Dog()
+    }
+}
 
 
 
