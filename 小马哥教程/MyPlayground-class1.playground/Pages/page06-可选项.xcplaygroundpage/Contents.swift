@@ -1,6 +1,8 @@
 //: [Previous](@previous)
 
 import Foundation
+import Darwin
+import Security
 
 
 /**
@@ -203,8 +205,20 @@ var y2:Int?? = 10
 print(y == y2)
 
 
+//可选项本质是enum类型
 
+//public enum Optionals<Wrapped> :ExpressibleByNilLiteral {
+//
+//    case none
+//    case some(Wrapped)
+//    public init(_ some: Wrapped)
+//}
 
+//var age:Int？ = 10
+var age1s :Optional<Int> = Optional<Int>.some(10)
+var age2:Optional = .some(10)
+var age3 = Optional.some(10)
+age3 = .none
 
 
 

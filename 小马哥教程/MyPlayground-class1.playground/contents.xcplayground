@@ -18,5 +18,7 @@
         <page name='page14-协议'/>
         <page name='page15-Error处理'/>
         <page name='page16-泛型'/>
+        <page name='page17-汇编分析StringArray'/>
+        <page name='page18-高级运算符'/>
     </pages>
 </playground>
