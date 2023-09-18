@@ -113,7 +113,33 @@ extension Point {
 }
 // 如果希望自定义初始化器的同时，编译器也能够生成默认初始化器
 // 可以在扩展中编写自定义初始化器
-// 类遵守协议实现required 初始化器，不能写在扩展中
+// required 初始化器，也不能写在扩展中
+
+// 协议
+// 扩展可以提供默认实现，也间接实现【可选协议】的效果
+// 扩展可以给协议扩充【协议中从未声明过的方法】
+
+protocol TestProtocol {
+    func test1()
+}
+
+extension TestProtocol {
+    func test1(){
+        
+    }
+    func test2(){
+        print("test2")
+    }
+}
+
+
+class testC:TestProtocol {
+    
+}
+
+var c = TestC()
+
+c.test2()
 
 
 
