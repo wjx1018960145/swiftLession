@@ -142,6 +142,31 @@ var c = TestC()
 c.test2()
 
 
+// 泛型
+
+class Stack<E> {
+    var elements = [E]()
+    func push(_ element:E){
+        elements.append(element)
+    }
+    func pop()->E {
+        elements.removeLast()
+    }
+    func size()->Int{elements.count}
+}
+//扩展中依然可以使用原类型中的泛型类型
+
+extension Stack{
+    func top()->E{elements.last!}
+}
+
+//复合条件扩展
+extension Stack :Equatable while E:Equatable {
+    static func == (left:Stack,right:Stack)->Bool {
+        left.elements == right.elements
+    }
+}
+
 
 
 //: [下一页](@next)
