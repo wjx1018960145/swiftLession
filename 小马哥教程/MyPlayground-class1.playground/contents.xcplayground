@@ -20,5 +20,6 @@
         <page name='page16-泛型'/>
         <page name='page17-汇编分析StringArray'/>
         <page name='page18-高级运算符'/>
+        <page name='page19-协议'/>
     </pages>
 </playground>
