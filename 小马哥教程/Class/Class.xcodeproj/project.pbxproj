@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6BE1A7F12AA34DA2006DC5B7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A7F02AA34DA2006DC5B7 /* main.swift */; };
+		6BEC41272AB9ACA50046396C /* JXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC41262AB9ACA50046396C /* JXPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		6BE1A7ED2AA34DA2006DC5B7 /* Class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Class; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE1A7F02AA34DA2006DC5B7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6BEC41242AB9ACA40046396C /* Class-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Class-Bridging-Header.h"; sourceTree = "<group>"; };
+		6BEC41252AB9ACA50046396C /* JXPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPerson.h; sourceTree = "<group>"; };
+		6BEC41262AB9ACA50046396C /* JXPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				6BE1A7F02AA34DA2006DC5B7 /* main.swift */,
+				6BEC41252AB9ACA50046396C /* JXPerson.h */,
+				6BEC41262AB9ACA50046396C /* JXPerson.m */,
+				6BEC41242AB9ACA40046396C /* Class-Bridging-Header.h */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 				TargetAttributes = {
 					6BE1A7EC2AA34DA2006DC5B7 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -120,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEC41272AB9ACA50046396C /* JXPerson.m in Sources */,
 				6BE1A7F12AA34DA2006DC5B7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,8 +254,16 @@
 		6BE1A7F52AA34DA2006DC5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Class/Class-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,8 +271,15 @@
 		6BE1A7F62AA34DA2006DC5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Class/Class-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

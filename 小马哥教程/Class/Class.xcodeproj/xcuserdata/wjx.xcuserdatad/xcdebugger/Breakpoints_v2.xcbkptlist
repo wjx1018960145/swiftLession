@@ -63,8 +63,8 @@
             filePath = "Class/main.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -106,19 +106,19 @@
             symbolName = "*0x100003c6e">
             <Locations>
                <Location
-                  uuid = "73957622-A706-4A02-9800-678A291C6CB0 - 3f9cd2541196fbe"
+                  uuid = "73957622-A706-4A02-9800-678A291C6CB0 - 9bc87a7e84ef856e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "main"
+                  symbolName = "default argument 1 of Swift.print(_: Any..., separator: Swift.String, terminator: Swift.String) -&gt; ()"
                   moduleName = "Class"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wjx/Desktop/swift%E8%AF%BE%E7%A8%8B/swiftLession/%E5%B0%8F%E9%A9%AC%E5%93%A5%E6%95%99%E7%A8%8B/Class/Class/main.swift"
+                  urlString = "file:///Users/wjx/Desktop/swift%E8%AF%BE%E7%A8%8B/swiftLession/%E5%B0%8F%E9%A9%AC%E5%93%A5%E6%95%99%E7%A8%8B/Class/%3Ccompiler-generated%3E"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -133,14 +133,11 @@
             symbolName = "*0x7fff20339c9b">
             <Locations>
                <Location
-                  uuid = "A920B934-FEBF-4F03-B162-CCFC732E8E81 - 875232068f9c79e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "dyld_stub_binder"
-                  moduleName = "libdyld.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "399">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -155,14 +152,11 @@
             symbolName = "*0x7fff2c6dfd76">
             <Locations>
                <Location
-                  uuid = "1D95D10B-58C0-49AE-ACC4-870867D86370 - 2d1ed059075c3099"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -&gt; Swift.String"
-                  moduleName = "libswiftCore.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "134">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
