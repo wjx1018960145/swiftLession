@@ -21,5 +21,7 @@
         <page name='page17-汇编分析StringArray'/>
         <page name='page18-高级运算符'/>
         <page name='page19-扩展'/>
+        <page name='page20-访问控制'/>
+        <page name='page21-内存管理'/>
     </pages>
 </playground>
