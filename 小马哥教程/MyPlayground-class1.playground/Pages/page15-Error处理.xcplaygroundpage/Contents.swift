@@ -123,7 +123,35 @@ try processFile("test.txt")
 // defer 语句的执行顺序与定义顺序相反
 
 
+//断言 assert
 
+// 不符合指定条件就抛出运行时错误，常用于调试（debug）阶段的条件
+//默认情况下swift的断言只会在Debug模式下生效，Release模式下会忽略
+
+
+// fataIError
+// 如果遇到问题，希望结束程序运行，可以直接使用fatalError函数抛出错误，
+// 使用了发talError函数，就不需要再使用return
+
+func test(_ num:Int)->Int {
+    if num >= 0 {
+        return 1
+    }
+    fatalError("num不能小于0")
+}
+
+// 在某些不得不实现，但不希望别人调用的方法，可以考虑内部使用fataeror函数
+
+class Person{required init(){}}
+
+class Student :Person {
+    required init() {
+        fatalError("不要使用我这个方法")
+    }
+    init(score:Int){}
+}
+var stu1 = Student(score: 98)
+var stud2 = Student()
 
 
 //: [下一页](@next)
