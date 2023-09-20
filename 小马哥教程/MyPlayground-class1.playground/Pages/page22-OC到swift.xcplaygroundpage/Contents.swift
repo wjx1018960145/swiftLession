@@ -254,7 +254,122 @@ print(pp.age)
 
 
 // 资源名管理
-// 
+//  R.Swift库 仿安卓开发
+
+
+// 多线程开发-一、异步
+
+public typealias Task = () -> Void
+
+class Async {
+    
+    public static func async(_ task:@escaping Task){
+        _async(task)
+    }
+
+    public static func async(_ task:@escaping Task,_ mainTask:@escaping Task){
+        _async(task, mainTask)
+    }
+
+
+    private static func _async(_ task:@escaping Task,_ mainTask:Task?=nil){
+        let item = DispatchWorkItem(block: task)
+        DispatchQueue.global().async {
+            if let main = mainTask {
+                item.notify(queue: DispatchQueue.main, execute: main)
+            }
+        }
+    }
+    
+    
+    // 多线程开发--延迟
+    
+    @discardableResult //返回值可以忽略
+    public static func delay(_ seconds:Double,_ block:@escaping Task)->DispatchWorkItem{
+        let item = DispatchWorkItem(block: block)
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now()+seconds, execute: item)
+        return item
+    }
+    
+    @discardableResult
+    public static func asyncDelay(_ seconds:Double,_ task:@escaping Task)->DispatchWorkItem{
+        return _asyncDelay(seconds, task)
+    }
+    public static func asyncDelay(_ second:Double,_ task:@escaping Task,_ mainTask:@escaping Task)->DispatchWorkItem{
+        return _asyncDelay(second, task, mainTask)
+    }
+    
+    
+    
+    private static func _asyncDelay(_ second:Double,_ task:@escaping Task,_ mainTask:Task?=nil)->DispatchWorkItem{
+        let item = DispatchWorkItem(block: task)
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now()+second, execute: item)
+        return item
+    }
+    
+    
+}
+
+//Async.async {
+//    print(1)
+//}
+
+//Async.async {
+//    print("1")
+//} _: {
+//    print("2")
+//}
+
+
+private var item : DispatchWorkItem? = nil
+
+  item =  Async.asyncDelay(3) {
+    print(1)
+} _: {
+    print(2)
+}
+item?.cancel()
+
+
+// swift中dispatch_onec被废除 取而代之的是
+//
+fileprivate var initTask:Void = {
+    print("init ----")
+}()
+
+
+let _ = initTask
+let _ = initTask
+
+
+
+// 多线开发-加锁
+
+public struct Cache{
+    private static var data = [String:Any]()
+    
+    private static var lock = DispatchSemaphore(value: 1)
+//    private static var lock  = NSLock
+//    private static var lock = NSRecursiveLock //递归锁
+    public static func get(_ key:String)->Any?{
+        return data[key]
+    }
+    public static func set(_ key:String,_ value:Any){
+        
+        
+        lock.wait()
+//        lock.lock()
+        defer {//无论如何都要解锁
+            lock.signal()
+//            lock.unlock
+        }
+        
+        data[key] = value
+        
+    }
+}
+
+
 
 
 
