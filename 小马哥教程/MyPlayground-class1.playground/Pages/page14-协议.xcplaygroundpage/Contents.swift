@@ -356,4 +356,14 @@ c1402.test()
 // 如果Self用在类中，要求返回时调用的初始化器是required的
 
 
+
+//只能被class继承的协议
+protocol ble:AnyObject{}
+protocol Runable1:class{}
+@objc protocol Runable2{}
+
+//可选协议
+
+
+
 //: [下一页](@next)

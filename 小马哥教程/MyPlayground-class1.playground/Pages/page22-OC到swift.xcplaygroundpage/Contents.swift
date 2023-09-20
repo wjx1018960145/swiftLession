@@ -137,6 +137,124 @@ var str8 = str6.substring(with: NSRange(location: 0, length: 2))
 print(str8)
 
 
+// OC桥接swift转换表
+/*
+ String     <--> NSString
+ String     <--  NSMutableString
+ Array      <--> NSArray
+ Array      <--  NSMutableArray
+ Dictionary <--> NSDictionary
+ Set        <--> NSSet
+ Set        <--  NSMutableSet
+ 
+ 
+ 
+ **/
+
+//只能被class继承的协议
+protocol ble:AnyObject{}
+protocol Runable1:class{}
+@objc protocol Runable2{}
+
+//可选协议
+// 可以通过@objc 定义可选协议，这种协议只能被class遵守
+@objc protocol Runable{
+    func fn1()
+    @objc optional func fn2()
+    func fn3()
+}
+
+class Dog:Runable {
+    func fn1() {
+        
+    }
+    
+    func fn3() {
+        
+    }
+}
+
+// dynamic 被@objc dynamic 修饰的内容具有动态性，比如调用方法会走runtime那一套流程
+
+class Dog1:NSObject {
+    @objc dynamic func fn1(){}
+    func test1(){}
+}
+
+
+//kvc kvo
+//swift 支持kvc kvo的条件
+// 属性所在的类，监听器最终继承自NSObject
+// 用@objc dynamic 修饰对应属性
+
+class Observer :NSObject {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print("observerValue",change?[.newKey] as Any)
+    }
+}
+
+class Cat :NSObject {
+    @objc dynamic var age = 0
+    var observer:Observer = Observer()
+    override init() {
+        super.init()
+        self.addObserver(observer, forKeyPath: "age", options: .new, context: nil)
+    }
+    deinit {
+        self.removeObserver(observer, forKeyPath: "age")
+    }
+}
+
+var c = Cat()
+c.age = 20
+c.setValue(25, forKey: "age")
+
+
+//block 方式的kvo
+class Cat1: NSObject {
+    @objc dynamic var age:Int = 0
+    var observer:NSKeyValueObservation?
+    override init() {
+        super.init()
+         
+        observer = observe(\Cat1.age,options:.new){//
+            (cat ,chang) in
+            print(chang.newValue as Any)
+        }
+    }
+}
+
+var c1 = Cat1()
+c1.age = 20
+c1.setValue(34, forKey: "age")
+
+
+// 关联对象
+// 在swift 中class依然可以使用关联对象
+// 默认情况下 extension 不可以增加存储属性
+// 借助关联对象，可以实现类似extension为增加存储属性的效果
+
+class Person3 {}
+extension Person3 {
+    private static var AGE_KEY :Void?
+    var age :Int {
+        get{
+            (objc_getAssociatedObject(self, &Self.AGE_KEY)as?Int) ?? 0
+        }
+        set{
+            objc_setAssociatedObject(self, &Self.AGE_KEY, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
+}
+
+var pp = Person3()
+pp.age = 10
+print(pp.age)
+
+
+
+// 资源名管理
+// 
 
 
 
