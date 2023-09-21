@@ -73,8 +73,38 @@ print(isArrayType(NSArray.self))
 // 响应式编程
 
 //RxSwfit
+// Observable 负责发送事件(Event)
+// Observer 负责订阅Observable 监听Observable 发出的事件
+// 事件有三种
+// 1 next 携带具体的数据
+// 2 error 携带错误数据信息，表明Observable终止 不会再发出事件
+// 3 completed 表明Observable终止，不会再发出事件
 
-
+//disposable
+//每当Observable被订阅时都会返回一个disposable实例 当调用disposable的dispose 就相当于取消订阅
+// 在不需要接收事件时 建议取消订阅释放资源 三种取消方法
+/**
+ //立即取消订阅
+ observable.subscribe { event in
+     print(event)
+ } onError: { error in
+     print(error)
+ } onCompleted: {
+     print("Completed")
+ }.dispose()
+ 
+ //当bag销毁（deinit）时会自动调用disposable的dispose
+ let bag =  DisposeBag()
+ observable.subscribe { event in
+     print(event)
+ } onError: { error in
+     print(error)
+ } onCompleted: {
+     print("Completed")
+ }.disposed(by: bag)
+ 
+ 
+ */
 
 
 
