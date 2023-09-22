@@ -26,5 +26,7 @@
         <page name='page22-OC到swift'/>
         <page name='page23-函数试编程'/>
         <page name='page24-响应式编程'/>
+        <page name='page25-常用第三方'/>
+        <page name='page26-Swift派发机制'/>
     </pages>
 </playground>

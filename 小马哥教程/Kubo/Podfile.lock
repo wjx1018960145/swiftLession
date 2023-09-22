@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (5.6.4)
+  - KakaJSON (1.1.2)
+  - Kingfisher (7.6.2)
+  - KingfisherWebP (1.4.0):
+    - Kingfisher (~> 7.0)
+    - libwebp (>= 1.1.0)
+  - libwebp (1.2.4):
+    - libwebp/demux (= 1.2.4)
+    - libwebp/mux (= 1.2.4)
+    - libwebp/webp (= 1.2.4)
+  - libwebp/demux (1.2.4):
+    - libwebp/webp
+  - libwebp/mux (1.2.4):
+    - libwebp/demux
+  - libwebp/webp (1.2.4)
+  - MJRefresh (3.7.5)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - KakaJSON (~> 1.1.2)
+  - Kingfisher (~> 7.6.2)
+  - KingfisherWebP
+  - MJRefresh
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KakaJSON
+    - Kingfisher
+    - KingfisherWebP
+    - libwebp
+    - MJRefresh
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
+  Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
+  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 6089f15c85d898bc31a381b9a6969a22326c0177
+
+COCOAPODS: 1.11.2

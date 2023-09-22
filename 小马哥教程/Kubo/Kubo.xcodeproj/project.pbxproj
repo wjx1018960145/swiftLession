@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BAF80A02ABC396000361672 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF809F2ABC396000361672 /* AppDelegate.swift */; };
+		6BAF80A22ABC396000361672 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80A12ABC396000361672 /* SceneDelegate.swift */; };
+		6BAF80A42ABC396000361672 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80A32ABC396000361672 /* ViewController.swift */; };
+		6BAF80A72ABC396000361672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF80A52ABC396000361672 /* Main.storyboard */; };
+		6BAF80A92ABC396900361672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF80A82ABC396900361672 /* Assets.xcassets */; };
+		6BAF80AC2ABC396900361672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF80AA2ABC396900361672 /* LaunchScreen.storyboard */; };
+		6BAF80B72ABC396900361672 /* KuboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80B62ABC396900361672 /* KuboTests.swift */; };
+		6BAF80C12ABC396900361672 /* KuboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80C02ABC396900361672 /* KuboUITests.swift */; };
+		6BAF80C32ABC396900361672 /* KuboUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80C22ABC396900361672 /* KuboUITestsLaunchTests.swift */; };
+		6BAF80D22ABC3D0800361672 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80D12ABC3D0800361672 /* TabBarViewController.swift */; };
+		6BAF80D52ABC3D9000361672 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80D42ABC3D9000361672 /* HomeViewController.swift */; };
+		6BAF80D92ABC3E1C00361672 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80D82ABC3E1C00361672 /* LiveViewController.swift */; };
+		6BAF80DB2ABC3E2600361672 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80DA2ABC3E2600361672 /* TrendViewController.swift */; };
+		6BAF80DD2ABC43A400361672 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80DC2ABC43A400361672 /* TabBar.swift */; };
+		6BAF80E02ABC612200361672 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80DF2ABC612200361672 /* API.swift */; };
+		6BAF80E22ABC906F00361672 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80E12ABC906E00361672 /* Move.swift */; };
+		6BAF80E62ABD399F00361672 /* Kubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF80E52ABD399F00361672 /* Kubo.m */; };
+		7EA25EEEADB8B45B49309C79 /* Pods_Kubo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE08C7CA6183D3DF50B7BDF /* Pods_Kubo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BAF80B32ABC396900361672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAF80942ABC396000361672 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BAF809B2ABC396000361672;
+			remoteInfo = Kubo;
+		};
+		6BAF80BD2ABC396900361672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAF80942ABC396000361672 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BAF809B2ABC396000361672;
+			remoteInfo = Kubo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6BAF809C2ABC396000361672 /* Kubo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kubo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF809F2ABC396000361672 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BAF80A12ABC396000361672 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6BAF80A32ABC396000361672 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BAF80A62ABC396000361672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BAF80A82ABC396900361672 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BAF80AB2ABC396900361672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BAF80AD2ABC396900361672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BAF80B22ABC396900361672 /* KuboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF80B62ABC396900361672 /* KuboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuboTests.swift; sourceTree = "<group>"; };
+		6BAF80BC2ABC396900361672 /* KuboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF80C02ABC396900361672 /* KuboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuboUITests.swift; sourceTree = "<group>"; };
+		6BAF80C22ABC396900361672 /* KuboUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuboUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6BAF80D12ABC3D0800361672 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6BAF80D42ABC3D9000361672 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6BAF80D82ABC3E1C00361672 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		6BAF80DA2ABC3E2600361672 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		6BAF80DC2ABC43A400361672 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		6BAF80DF2ABC612200361672 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6BAF80E12ABC906E00361672 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		6BAF80E32ABD399C00361672 /* Kubo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kubo-Bridging-Header.h"; sourceTree = "<group>"; };
+		6BAF80E42ABD399F00361672 /* Kubo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kubo.h; sourceTree = "<group>"; };
+		6BAF80E52ABD399F00361672 /* Kubo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kubo.m; sourceTree = "<group>"; };
+		8DE08C7CA6183D3DF50B7BDF /* Pods_Kubo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kubo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5074179937ED1752386DF6A /* Pods-Kubo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kubo.debug.xcconfig"; path = "Target Support Files/Pods-Kubo/Pods-Kubo.debug.xcconfig"; sourceTree = "<group>"; };
+		F711FC0855FD3E61A2287CC5 /* Pods-Kubo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kubo.release.xcconfig"; path = "Target Support Files/Pods-Kubo/Pods-Kubo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BAF80992ABC396000361672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA25EEEADB8B45B49309C79 /* Pods_Kubo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80AF2ABC396900361672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80B92ABC396900361672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BAF80932ABC396000361672 = {
+			isa = PBXGroup;
+			children = (
+				6BAF809E2ABC396000361672 /* Kubo */,
+				6BAF80B52ABC396900361672 /* KuboTests */,
+				6BAF80BF2ABC396900361672 /* KuboUITests */,
+				6BAF809D2ABC396000361672 /* Products */,
+				8A2094AE39B3C06DADA06218 /* Pods */,
+				FD6889EE5F16682B1D87269E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6BAF809D2ABC396000361672 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF809C2ABC396000361672 /* Kubo.app */,
+				6BAF80B22ABC396900361672 /* KuboTests.xctest */,
+				6BAF80BC2ABC396900361672 /* KuboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BAF809E2ABC396000361672 /* Kubo */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80D72ABC3DFA00361672 /* Trend */,
+				6BAF80D62ABC3DEA00361672 /* Live */,
+				6BAF80D32ABC3D6A00361672 /* Home */,
+				6BAF80D02ABC3C1700361672 /* Main */,
+				6BAF80CF2ABC399900361672 /* Resource */,
+			);
+			path = Kubo;
+			sourceTree = "<group>";
+		};
+		6BAF80B52ABC396900361672 /* KuboTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80B62ABC396900361672 /* KuboTests.swift */,
+			);
+			path = KuboTests;
+			sourceTree = "<group>";
+		};
+		6BAF80BF2ABC396900361672 /* KuboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80C02ABC396900361672 /* KuboUITests.swift */,
+				6BAF80C22ABC396900361672 /* KuboUITestsLaunchTests.swift */,
+			);
+			path = KuboUITests;
+			sourceTree = "<group>";
+		};
+		6BAF80CF2ABC399900361672 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80A52ABC396000361672 /* Main.storyboard */,
+				6BAF80A82ABC396900361672 /* Assets.xcassets */,
+				6BAF80AA2ABC396900361672 /* LaunchScreen.storyboard */,
+				6BAF80AD2ABC396900361672 /* Info.plist */,
+				6BAF80E42ABD399F00361672 /* Kubo.h */,
+				6BAF80E52ABD399F00361672 /* Kubo.m */,
+				6BAF80E32ABD399C00361672 /* Kubo-Bridging-Header.h */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6BAF80D02ABC3C1700361672 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80DE2ABC60F500361672 /* API */,
+				6BAF809F2ABC396000361672 /* AppDelegate.swift */,
+				6BAF80A12ABC396000361672 /* SceneDelegate.swift */,
+				6BAF80A32ABC396000361672 /* ViewController.swift */,
+				6BAF80D12ABC3D0800361672 /* TabBarViewController.swift */,
+				6BAF80DC2ABC43A400361672 /* TabBar.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6BAF80D32ABC3D6A00361672 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80D42ABC3D9000361672 /* HomeViewController.swift */,
+				6BAF80E12ABC906E00361672 /* Move.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6BAF80D62ABC3DEA00361672 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80D82ABC3E1C00361672 /* LiveViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		6BAF80D72ABC3DFA00361672 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80DA2ABC3E2600361672 /* TrendViewController.swift */,
+			);
+			path = Trend;
+			sourceTree = "<group>";
+		};
+		6BAF80DE2ABC60F500361672 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF80DF2ABC612200361672 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8A2094AE39B3C06DADA06218 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5074179937ED1752386DF6A /* Pods-Kubo.debug.xcconfig */,
+				F711FC0855FD3E61A2287CC5 /* Pods-Kubo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD6889EE5F16682B1D87269E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DE08C7CA6183D3DF50B7BDF /* Pods_Kubo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BAF809B2ABC396000361672 /* Kubo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF80C62ABC396900361672 /* Build configuration list for PBXNativeTarget "Kubo" */;
+			buildPhases = (
+				E2599EDA1EEF787CBB656B00 /* [CP] Check Pods Manifest.lock */,
+				6BAF80982ABC396000361672 /* Sources */,
+				6BAF80992ABC396000361672 /* Frameworks */,
+				6BAF809A2ABC396000361672 /* Resources */,
+				22E92FB3E0C53CF7B68A237A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kubo;
+			productName = Kubo;
+			productReference = 6BAF809C2ABC396000361672 /* Kubo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BAF80B12ABC396900361672 /* KuboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF80C92ABC396900361672 /* Build configuration list for PBXNativeTarget "KuboTests" */;
+			buildPhases = (
+				6BAF80AE2ABC396900361672 /* Sources */,
+				6BAF80AF2ABC396900361672 /* Frameworks */,
+				6BAF80B02ABC396900361672 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BAF80B42ABC396900361672 /* PBXTargetDependency */,
+			);
+			name = KuboTests;
+			productName = KuboTests;
+			productReference = 6BAF80B22ABC396900361672 /* KuboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6BAF80BB2ABC396900361672 /* KuboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF80CC2ABC396900361672 /* Build configuration list for PBXNativeTarget "KuboUITests" */;
+			buildPhases = (
+				6BAF80B82ABC396900361672 /* Sources */,
+				6BAF80B92ABC396900361672 /* Frameworks */,
+				6BAF80BA2ABC396900361672 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BAF80BE2ABC396900361672 /* PBXTargetDependency */,
+			);
+			name = KuboUITests;
+			productName = KuboUITests;
+			productReference = 6BAF80BC2ABC396900361672 /* KuboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BAF80942ABC396000361672 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					6BAF809B2ABC396000361672 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+					6BAF80B12ABC396900361672 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 6BAF809B2ABC396000361672;
+					};
+					6BAF80BB2ABC396900361672 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 6BAF809B2ABC396000361672;
+					};
+				};
+			};
+			buildConfigurationList = 6BAF80972ABC396000361672 /* Build configuration list for PBXProject "Kubo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BAF80932ABC396000361672;
+			productRefGroup = 6BAF809D2ABC396000361672 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BAF809B2ABC396000361672 /* Kubo */,
+				6BAF80B12ABC396900361672 /* KuboTests */,
+				6BAF80BB2ABC396900361672 /* KuboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BAF809A2ABC396000361672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF80AC2ABC396900361672 /* LaunchScreen.storyboard in Resources */,
+				6BAF80A92ABC396900361672 /* Assets.xcassets in Resources */,
+				6BAF80A72ABC396000361672 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80B02ABC396900361672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80BA2ABC396900361672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E92FB3E0C53CF7B68A237A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kubo/Pods-Kubo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kubo/Pods-Kubo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kubo/Pods-Kubo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2599EDA1EEF787CBB656B00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kubo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BAF80982ABC396000361672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF80E22ABC906F00361672 /* Move.swift in Sources */,
+				6BAF80D52ABC3D9000361672 /* HomeViewController.swift in Sources */,
+				6BAF80D22ABC3D0800361672 /* TabBarViewController.swift in Sources */,
+				6BAF80A42ABC396000361672 /* ViewController.swift in Sources */,
+				6BAF80DD2ABC43A400361672 /* TabBar.swift in Sources */,
+				6BAF80A02ABC396000361672 /* AppDelegate.swift in Sources */,
+				6BAF80DB2ABC3E2600361672 /* TrendViewController.swift in Sources */,
+				6BAF80D92ABC3E1C00361672 /* LiveViewController.swift in Sources */,
+				6BAF80E62ABD399F00361672 /* Kubo.m in Sources */,
+				6BAF80E02ABC612200361672 /* API.swift in Sources */,
+				6BAF80A22ABC396000361672 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80AE2ABC396900361672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF80B72ABC396900361672 /* KuboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF80B82ABC396900361672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF80C12ABC396900361672 /* KuboUITests.swift in Sources */,
+				6BAF80C32ABC396900361672 /* KuboUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BAF80B42ABC396900361672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BAF809B2ABC396000361672 /* Kubo */;
+			targetProxy = 6BAF80B32ABC396900361672 /* PBXContainerItemProxy */;
+		};
+		6BAF80BE2ABC396900361672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BAF809B2ABC396000361672 /* Kubo */;
+			targetProxy = 6BAF80BD2ABC396900361672 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BAF80A52ABC396000361672 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAF80A62ABC396000361672 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6BAF80AA2ABC396900361672 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAF80AB2ABC396900361672 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BAF80C42ABC396900361672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6BAF80C52ABC396900361672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BAF80C72ABC396900361672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5074179937ED1752386DF6A /* Pods-Kubo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kubo/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.Kubo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Kubo/Resource/Kubo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BAF80C82ABC396900361672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F711FC0855FD3E61A2287CC5 /* Pods-Kubo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kubo/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.Kubo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Kubo/Resource/Kubo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6BAF80CA2ABC396900361672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.KuboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kubo.app/Kubo";
+			};
+			name = Debug;
+		};
+		6BAF80CB2ABC396900361672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.KuboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kubo.app/Kubo";
+			};
+			name = Release;
+		};
+		6BAF80CD2ABC396900361672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.KuboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kubo;
+			};
+			name = Debug;
+		};
+		6BAF80CE2ABC396900361672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kulian.KuboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kubo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BAF80972ABC396000361672 /* Build configuration list for PBXProject "Kubo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF80C42ABC396900361672 /* Debug */,
+				6BAF80C52ABC396900361672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF80C62ABC396900361672 /* Build configuration list for PBXNativeTarget "Kubo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF80C72ABC396900361672 /* Debug */,
+				6BAF80C82ABC396900361672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF80C92ABC396900361672 /* Build configuration list for PBXNativeTarget "KuboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF80CA2ABC396900361672 /* Debug */,
+				6BAF80CB2ABC396900361672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF80CC2ABC396900361672 /* Build configuration list for PBXNativeTarget "KuboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF80CD2ABC396900361672 /* Debug */,
+				6BAF80CE2ABC396900361672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BAF80942ABC396000361672 /* Project object */;
+}

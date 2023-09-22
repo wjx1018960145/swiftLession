@@ -1,0 +1,9 @@
+use_frameworks!
+target 'Kubo' do
+pod 'Alamofire'
+pod 'Kingfisher', '~> 7.6.2'
+pod 'SwiftyJSON'
+pod 'KakaJSON', '~> 1.1.2'
+pod 'MJRefresh'
+pod 'KingfisherWebP'
+end
