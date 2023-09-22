@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B57AB832ABD7C2C00D38CBA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57AB822ABD7C2C00D38CBA /* LoginView.swift */; };
+		6B57AB852ABD8B8200D38CBA /* WelcomScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57AB842ABD8B8100D38CBA /* WelcomScreenView.swift */; };
 		6B8331D12AB20CDD00ADD96B /* SwiftUIClassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8331D02AB20CDD00ADD96B /* SwiftUIClassApp.swift */; };
 		6B8331D32AB20CDD00ADD96B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8331D22AB20CDD00ADD96B /* ContentView.swift */; };
 		6B8331D52AB20CEA00ADD96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8331D42AB20CEA00ADD96B /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B57AB822ABD7C2C00D38CBA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6B57AB842ABD8B8100D38CBA /* WelcomScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomScreenView.swift; sourceTree = "<group>"; };
 		6B8331CD2AB20CDD00ADD96B /* SwiftUIClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B8331D02AB20CDD00ADD96B /* SwiftUIClassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIClassApp.swift; sourceTree = "<group>"; };
 		6B8331D22AB20CDD00ADD96B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B57AB802ABD75DD00D38CBA /* viewmode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmode;
+			sourceTree = "<group>";
+		};
+		6B57AB812ABD7C0C00D38CBA /* login */ = {
+			isa = PBXGroup;
+			children = (
+				6B57AB822ABD7C2C00D38CBA /* LoginView.swift */,
+				6B57AB842ABD8B8100D38CBA /* WelcomScreenView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		6B8331C42AB20CDD00ADD96B = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +114,8 @@
 		6B8331CF2AB20CDD00ADD96B /* SwiftUIClass */ = {
 			isa = PBXGroup;
 			children = (
+				6B57AB812ABD7C0C00D38CBA /* login */,
+				6B57AB802ABD75DD00D38CBA /* viewmode */,
 				6B8331D02AB20CDD00ADD96B /* SwiftUIClassApp.swift */,
 				6B8331D22AB20CDD00ADD96B /* ContentView.swift */,
 				6B8331D42AB20CEA00ADD96B /* Assets.xcassets */,
@@ -257,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B57AB832ABD7C2C00D38CBA /* LoginView.swift in Sources */,
 				6B8331D32AB20CDD00ADD96B /* ContentView.swift in Sources */,
 				6B8331D12AB20CDD00ADD96B /* SwiftUIClassApp.swift in Sources */,
+				6B57AB852ABD8B8200D38CBA /* WelcomScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIClass/Preview Content\"";
+				DEVELOPMENT_TEAM = A7NN4D42A9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -447,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIClass/Preview Content\"";
+				DEVELOPMENT_TEAM = A7NN4D42A9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
